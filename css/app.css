@@ -1,0 +1,62 @@
+#tables a {
+  font-weight: bold;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+#tables a:hover {
+  background-color: #e6e6e6;
+}
+
+#tables .active:hover, .active, h2 span {
+  background-color: #333;
+  color: white;
+}
+
+ul#menu li {
+  list-style-type: none;
+  text-align: center;
+  padding-bottom: 1em;
+}
+ul#menu li div {
+  font-size: 64px;
+  line-height: 64px;
+}
+ul#menu li p {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+#customer-tab {
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
+  padding: 1em 2em;
+}
+#customer-tab li {
+  list-style-type: none;
+  border-bottom: 1px solid #ccc;
+}
+#customer-tab li#total h3 {
+  font-weight: bold;
+}
+#customer-tab li#total {
+  border-top: 4px solid black;
+  border-bottom: 0;
+}
+#customer-tab li h3 {
+  font-weight: normal;
+}
+#customer-tab li span {
+  float: right;
+}
+
+#order {
+  border-left: 1px dashed #333;
+}
+#order h2 {
+  text-align: center;
+}
+h2 span {
+  padding: 0.5em 1em;
+}
