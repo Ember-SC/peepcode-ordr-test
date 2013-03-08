@@ -4,10 +4,10 @@
     "js/libs/handlebars-1.0.0.rc.2.js",
     "js/libs/ember.js",
     "js/libs/ember-data.js",
-    "js/app.js",
     "js/tests/mocha.js",
     "js/tests/chai.js",
     "js/tests/settings.js",
+    "js/app.js",
     "js/tests/tests/**/*.js",
     "public/*.js"
   ]
