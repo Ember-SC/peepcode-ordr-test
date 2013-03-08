@@ -8,6 +8,7 @@
     "js/tests/mocha.js",
     "js/tests/chai.js",
     "js/tests/settings.js",
-    "js/tests/tests/**/*.js"
+    "js/tests/tests/**/*.js",
+    "public/*.js"
   ]
 }
