@@ -9,3 +9,4 @@ function setTestMode() {
     location: 'none'
   });
 }
+setTestMode();
