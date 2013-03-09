@@ -14,7 +14,10 @@ gem "less"
 gem "json"
 gem "therubyracer"
 gem "stylus"
+gem 'rb-fsevent', '~> 0.9'
+gem 'colored'
+gem 'guard'
+gem 'guard-rake'
 gem "rake-pipeline-web-filters", "~> 0.7.0"
-#gem "ember-dev", :git => "https://github.com/emberjs/ember-dev.git", :branch => "master"
 
 # vim:ft=ruby
