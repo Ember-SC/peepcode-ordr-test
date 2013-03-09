@@ -10,5 +10,8 @@
     "js/tests/chai.js",
     "js/tests/settings.js",
     "js/tests/tests/**/*.js"
+  ],
+  "serve_files": [
+    "js/tests/generated/*.js"
   ]
 }
