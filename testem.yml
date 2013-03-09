@@ -1,10 +1,10 @@
 {
+  "framework": "mocha",
   "src_files": [
     "js/libs/jquery-1.8.3.min.js",
     "js/libs/handlebars-1.0.0.rc.2.js",
     "js/libs/ember.js",
     "js/libs/ember-data.js",
-    "js/tests/mocha.js",
     "js/tests/chai.js",
     "js/tests/settings.js",
     "js/app.js",
