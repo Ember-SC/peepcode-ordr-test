@@ -44,11 +44,19 @@ feedback/etc and/or come join us!
 1.  Connect browsers to ```testem``` as documented by ```testem```.
 1.  Observe test results both in connected browsers and in ```testem``` browser page itself.
 
-At this point, we have both java-based and coffee-based test scripts here:
+At this point, we have both coffee-based test scripts here:
 
-    js/tests/tests/tests
+    js/tests/tests/*
 
-*NOTE: at this point the coffee transation is not working right which this is why this is on a branch at the moment.*
+## Compile coffee script tests 
+
+    $ bundle exec rakep build
+
+Or using Guard
+
+    $ bundle exec guard
+
+To quit watching the js directory use the `exit` command to leave the watcher
 
 # Credits
 

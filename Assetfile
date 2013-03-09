@@ -1,13 +1,18 @@
 # Assetfile
 require 'rake-pipeline-web-filters'
 
-output "public"
+# temp workaround to combile bug
+# see: http://stackoverflow.com/questions/12866054/uninitialized-constant-rakepipelinemanifestentrydatetime
+require 'fileutils'
+FileUtils.rm_rf 'tmp'
 
-input "js/tests/tests" do
+output 'public'
 
-  match "*.coffee" do
+input 'js/tests' do
+
+  match '**/*.coffee' do
     coffee_script
-    concat "tests.js"
+    concat 'tests.js'
   end
 
 end
