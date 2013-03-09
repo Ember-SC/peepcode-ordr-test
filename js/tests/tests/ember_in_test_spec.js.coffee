@@ -1,7 +1,4 @@
-# Asset manager is not compiling as of commit 3/7
 describe 'initializing the app', ->
-  # beforeEach ->
-  #   setTestMode()
   it 'sends me to tables.index', ->
     path = ""
     Ember.run( ->
