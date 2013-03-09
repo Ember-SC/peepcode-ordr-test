@@ -1,4 +1,4 @@
-describe("Tables on initial startup", function () {
+describe("Can use App.ready to test initial startup", function () {
 
   it("should be in its initial state", function () {
     App.ready = function() {
