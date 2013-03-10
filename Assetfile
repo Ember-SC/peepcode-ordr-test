@@ -1,0 +1,15 @@
+# Assetfile
+require 'rake-pipeline-web-filters'
+
+output "public"
+
+input "js/tests/tests" do
+
+  match "*.coffee" do
+    coffee_script
+    concat "tests.js"
+  end
+
+end
+
+# vim:ft=ruby
