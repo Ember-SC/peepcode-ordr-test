@@ -3,11 +3,10 @@
 // Globals
 expect = chai.expect;
 
-// Put Ember in test mode
-
-var setTestMode = function() {
+function setTestMode() {
   Ember.testing = true;
   Ember.Router.reopen({
     location: 'none'
   });
-};
+}
+setTestMode();

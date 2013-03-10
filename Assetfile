@@ -1,0 +1,20 @@
+# Assetfile
+require 'rake-pipeline-web-filters'
+
+# temp workaround to combile bug
+# see: http://stackoverflow.com/questions/12866054/uninitialized-constant-rakepipelinemanifestentrydatetime
+require 'fileutils'
+FileUtils.rm_rf 'tmp'
+
+output 'public'
+
+input 'js/tests' do
+
+  match '**/*.coffee' do
+    coffee_script
+    concat 'tests.js'
+  end
+
+end
+
+# vim:ft=ruby
