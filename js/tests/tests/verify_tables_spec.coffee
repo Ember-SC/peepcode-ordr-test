@@ -1,4 +1,5 @@
 describe 'Tables on initial startup', ->
+
   beforeEach ->
     resetApp()
 
