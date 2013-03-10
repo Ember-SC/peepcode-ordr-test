@@ -43,8 +43,9 @@ feedback/etc and/or come join us!
 1.  Observe that ```testem``` is running.
 1.  Connect browsers to ```testem``` as documented by ```testem```.
 1.  Observe test results both in connected browsers and in ```testem``` browser page itself.
+1.  Connect a headless browser using ```phantomjs``` with command  
 
-At this point, we have both coffee-based test scripts here:
+At this point, we have both javascript-based and coffee-based test scripts here:
 
     js/tests/tests/*
 
@@ -57,10 +58,6 @@ Or using Guard
     $ bundle exec guard
 
 To quit watching the js directory use the `exit` command to leave the watcher
-
-At this point, we have both java-based and coffee-based test scripts here:
-
-    js/tests/tests/tests
 
 # Credits
 
