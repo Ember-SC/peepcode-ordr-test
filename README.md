@@ -58,6 +58,10 @@ Or using Guard
 
 To quit watching the js directory use the `exit` command to leave the watcher
 
+At this point, we have both java-based and coffee-based test scripts here:
+
+    js/tests/tests/tests
+
 # Credits
 
 Thanks to:
