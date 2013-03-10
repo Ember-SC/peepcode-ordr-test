@@ -1,2 +1,2 @@
-cp ../ember.js/dist/ember.js js/libs/ember.js
-cp ../ember.js/dist/ember.min.js js/libs/ember.min.js
+cp ../ember.js/dist/ember.js js/libs/
+cp ../ember.js/dist/modules/handlebars.js js/libs/
