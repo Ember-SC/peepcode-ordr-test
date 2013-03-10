@@ -11,7 +11,8 @@
     "js/tests/before_app.js",
     "js/app.js",
     "js/tests/after_app.js",
-    "js/tests/tests/**/*.coffee"
+    "js/tests/tests/**/*.coffee",
+    "js/tests/tests/**/*.js"
   ],
   "serve_files": [
     "js/tests/chai.js",
