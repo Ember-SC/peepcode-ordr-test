@@ -14,5 +14,3 @@ function setTestMode() {
   });
 }
 setTestMode();
-
-// Perhaps use in a beforeEach... `Ember.Router.reopen({location: 'none'})`
