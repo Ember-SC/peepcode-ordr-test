@@ -2,3 +2,4 @@
 .DS_Store
 public/
 tmp/
+js/tests/generated/
