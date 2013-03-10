@@ -6,9 +6,10 @@ expect = chai.expect;
 mocha.setup({ignoreLeaks: true});
 
 function setTestMode() {
-  // Ember.testing = true;
+  Ember.testing = true;
   Ember.Router.reopen({
     location: 'none'
   });
 }
 setTestMode();
+

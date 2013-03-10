@@ -11,8 +11,9 @@
     "js/libs/ember.js",
     "js/libs/ember-data.js",
     "js/tests/chai.js",
-    "js/tests/settings.js",
+    "js/tests/before_app.js",
     "js/app.js",
+    "js/tests/after_app.js",
     "js/tests/generated/*.js"
   ]
 }

@@ -1,4 +1,6 @@
 describe 'initializing the app', ->
+  beforeEach ->
+    resetApp()
   it 'sends me to tables.index', ->
     path = ''
     Ember.run ->
