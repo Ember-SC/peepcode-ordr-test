@@ -1,6 +1,7 @@
 {
   "framework": "mocha",
   "before_tests": "coffee -o js/tests/generated/ -c js/tests/tests/",
+  "after_tests": "rm js/test/generated/*.js",
   "on_exit": "rm js/tests/generated/*.js",
   "src_files": [
     "js/tests/chai.js",
