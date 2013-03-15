@@ -22,6 +22,7 @@
     "js/libs/ember.js",
     "js/libs/ember-data.js",
     "js/tests/before_app.js",
+    "js/templates.js",
     "js/app.js",
     "js/tests/after_app.js",
     "js/tests/tests/**/*.js",
