@@ -40,10 +40,6 @@
     sortProperties: ['id']
   });
 
-  App.TableController = Ember.ObjectController.extend({
-
-  });
-
   App.FoodController = Ember.ArrayController.extend({
     tableController: null,
     addFood: function(food) {
