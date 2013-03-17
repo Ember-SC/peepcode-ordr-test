@@ -28,16 +28,27 @@
     }
   });
 
+  App.TableRoute = Ember.Route.extend({
+    setupController: function() {
+      this.controllerFor('food').set('tableController', this.controllerFor('table'));
+    }
+  });
+
   // Controllers
   // Implement explicitly to use the object proxy.
   App.TablesController = Ember.ArrayController.extend({
     sortProperties: ['id']
   });
 
+  App.TableController = Ember.ObjectController.extend({
+
+  });
+
   App.FoodController = Ember.ArrayController.extend({
+    tableController: null,
     addFood: function(food) {
-      var table = this.controllerFor('table').get('model'),
-          tabItems = table.get('tab.tabItems');
+      var table = this.get('tableController').get('model'),
+          tabItems = App.Tab.find(table.id).get('tabItems');
 
       tabItems.createRecord({
         food: food,
