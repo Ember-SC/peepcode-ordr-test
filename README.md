@@ -33,18 +33,15 @@ feedback/etc and/or come join us!
 
         git clone git@github.com:OC-Emberjs/peepcode-ordr-test.git
 
-1.  Install [testem](https://github.com/airportyh/testem).
 1.  In a console window:
 
         cd peepcode-ordr-test
-        bundle install
-        testem
+        bin/server
 
-1.  Observe that ```testem``` is running.
-1.  Connect browsers to ```testem``` as documented by ```testem```.
-1.  Observe test results both in connected browsers and in ```testem``` browser page itself.
+1.  open http://localhost:3000/js/tests/
 
-At this point, we have coffee-based test scripts here:
+
+QUnit test scripts here:
 
     js/tests/tests/*
 

@@ -1,7 +1,5 @@
-
   /*global App*/
-
-  window.App = Ember.Application.create();
+  window.App = Ember.Application.create({rootElement: '#app-root'});
 
   // Router
   App.Router.map(function() {
