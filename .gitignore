@@ -1,3 +1,7 @@
 .idea
 .DS_Store
 js/tests/generated/
+tmp
+
+# karma
+libpeerconnection.log

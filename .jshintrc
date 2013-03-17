@@ -2,14 +2,10 @@
   "predef": [
     "$",
     "App",
-    "beforeEach",
-    "chai",
     "console",
-    "describe",
     "Ember",
     "DS",
     "Handlebars",
-    "it",
     "Metamorph",
     "RSVP",
     "require",
@@ -18,6 +14,8 @@
     "notEqual",
     "notStrictEqual",
     "test",
+    "testing",
+    "async",
     "asyncTest",
     "testBoth",
     "testWithDefault",
@@ -30,7 +28,12 @@
     "strictEqual",
     "module",
     "expect",
-    "minispade"
+    "visit",
+    "find",
+    "click",
+    "fillIn",
+    "wait",
+    "assert"
   ],
 
   "node" : false,
