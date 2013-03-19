@@ -150,8 +150,8 @@ Ember.deprecateFunc = function(message, func) {
 
 })();
 
-// Version: v1.0.0-rc.1-188-gb6bb967
-// Last commit: b6bb967 (2013-03-16 18:09:42 -0700)
+// Version: v1.0.0-rc.1-203-ga1cbd22
+// Last commit: a1cbd22 (2013-03-18 10:31:41 -0700)
 
 
 (function() {
@@ -402,12 +402,12 @@ Ember.handleErrors = function(func, context) {
   // so in the event that we don't have an `onerror` handler we don't wrap in a try/catch
   if ('function' === typeof Ember.onerror) {
     try {
-      return func.apply(context || this);
+      return func.call(context || this);
     } catch (error) {
       Ember.onerror(error);
     }
   } else {
-    return func.apply(context || this);
+    return func.call(context || this);
   }
 };
 
@@ -416,6 +416,7 @@ Ember.merge = function(original, updates) {
     if (!updates.hasOwnProperty(prop)) { continue; }
     original[prop] = updates[prop];
   }
+  return original;
 };
 
 /**
@@ -4061,7 +4062,7 @@ function sendEvent(obj, eventName, params, actions) {
     if (params) {
       method.apply(target, params);
     } else {
-      method.apply(target);
+      method.call(target);
     }
   }
   return true;

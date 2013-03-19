@@ -150,8 +150,8 @@ Ember.deprecateFunc = function(message, func) {
 
 })();
 
-// Version: v1.0.0-rc.1-188-gb6bb967
-// Last commit: b6bb967 (2013-03-16 18:09:42 -0700)
+// Version: v1.0.0-rc.1-203-ga1cbd22
+// Last commit: a1cbd22 (2013-03-18 10:31:41 -0700)
 
 
 (function() {
@@ -402,12 +402,12 @@ Ember.handleErrors = function(func, context) {
   // so in the event that we don't have an `onerror` handler we don't wrap in a try/catch
   if ('function' === typeof Ember.onerror) {
     try {
-      return func.apply(context || this);
+      return func.call(context || this);
     } catch (error) {
       Ember.onerror(error);
     }
   } else {
-    return func.apply(context || this);
+    return func.call(context || this);
   }
 };
 
@@ -416,6 +416,7 @@ Ember.merge = function(original, updates) {
     if (!updates.hasOwnProperty(prop)) { continue; }
     original[prop] = updates[prop];
   }
+  return original;
 };
 
 /**
@@ -4061,7 +4062,7 @@ function sendEvent(obj, eventName, params, actions) {
     if (params) {
       method.apply(target, params);
     } else {
-      method.apply(target);
+      method.call(target);
     }
   }
   return true;
@@ -20431,7 +20432,6 @@ Ember.Handlebars.registerBoundHelper = function(name, fn) {
 */
 function evaluateMultiPropertyBoundHelper(context, fn, normalizedProperties, options) {
   var numProperties = normalizedProperties.length,
-      self = this,
       data = options.data,
       view = data.view,
       hash = options.hash,
@@ -21697,7 +21697,6 @@ EmberHandlebars.bindClasses = function(context, classBindings, view, bindAttrId,
 */
 
 var get = Ember.get, set = Ember.set;
-var PARENT_VIEW_PATH = /^parentView\./;
 var EmberHandlebars = Ember.Handlebars;
 
 EmberHandlebars.ViewHelper = Ember.Object.create({
@@ -22380,7 +22379,7 @@ Ember.Handlebars.EachView = Ember.CollectionView.extend(Ember._Metamorph, {
     Ember.removeBeforeObserver(this, 'content', null, '_contentWillChange');
     Ember.removeObserver(this, 'content', null, '_contentDidChange');
 
-    callback.apply(this);
+    callback.call(this);
 
     Ember.addBeforeObserver(this, 'content', null, '_contentWillChange');
     Ember.addObserver(this, 'content', null, '_contentDidChange');
@@ -23029,8 +23028,8 @@ var get = Ember.get, set = Ember.set;
   ## HTML Attributes
 
   By default `Ember.TextField` provides support for `type`, `value`, `size`,
-  `placeholder`, `disabled`, `maxlength` and `tabindex` attributes on a
-  test field. If you need to support more attributes have a look at the
+  `pattern`, `placeholder`, `disabled`, `maxlength` and `tabindex` attributes
+  on a test field. If you need to support more attributes have a look at the
   `attributeBindings` property in `Ember.View`'s HTML Attributes section.
 
   To globally add support for additional attributes you can reopen
@@ -23098,9 +23097,9 @@ Ember.TextField = Ember.View.extend(Ember.TextSupport,
     the user presses the return key when editing a text field, and sends
     the value of the field as the context.
 
-   @property action
-   @type String
-   @default null
+    @property action
+    @type String
+    @default null
   */
   action: null,
 
@@ -27419,6 +27418,218 @@ Ember.DAG = DAG;
 @submodule ember-application
 */
 
+var get = Ember.get,
+    classify = Ember.String.classify,
+    capitalize = Ember.String.capitalize,
+    decamelize = Ember.String.decamelize;
+
+/**
+  The DefaultResolver defines the default lookup rules to resolve
+  container lookups before consulting the container for registered
+  items:
+
+  * templates are looked up on `Ember.TEMPLATES`
+  * other names are looked up on the application after converting
+    the name. For example, `controller:post` looks up
+    `App.PostController` by default.
+  * there are some nuances (see examples below)
+
+  ### How Resolving Works
+
+  The container calls this object's `resolve` method with the
+  `fullName` argument.
+
+  It first parses the fullName into an object using `parseName`.
+
+  Then it checks for the presence of a type-specific instance
+  method of the form `resolve[Type]` and calls it if it exists.
+  For example if it was resolving 'template:post', it would call
+  the `resolveTemplate` method.
+
+  Its last resort is to call the `resolveOther` method.
+
+  The methods of this object are designed to be easy to override
+  in a subclass. For example, you could enhance how a template
+  is resolved like so:
+
+  ```javascript
+  App = Ember.Application.create({
+    resolver: Ember.DefaultResolver.extend({
+      resolveTemplate: function(parsedName) {
+        var resolvedTemplate = this._super(parsedName);
+        if (resolvedTemplate) { return resolvedTemplate; }
+        return Ember.TEMPLATES['not_found'];
+      }
+    })
+  });
+  ```
+
+  Some examples of how names are resolved:
+
+  ```
+  'template:post' //=> Ember.TEMPLATES['post']
+  'template:posts/byline' //=> Ember.TEMPLATES['posts/byline']
+  'template:posts.byline' //=> Ember.TEMPLATES['posts/byline']
+  'template:blogPost' //=> Ember.TEMPLATES['blogPost']
+                      //   OR
+                      //   Ember.TEMPLATES['blog_post']
+  'controller:post' //=> App.PostController
+  'controller:posts.index' //=> App.PostsIndexController
+  'controller:blog/post' //=> Blog.PostController
+  'controller:basic' //=> Ember.Controller
+  'route:post' //=> App.PostRoute
+  'route:posts.index' //=> App.PostsIndexRoute
+  'route:blog/post' //=> Blog.PostRoute
+  'route:basic' //=> Ember.Route
+  'view:post' //=> App.PostView
+  'view:posts.index' //=> App.PostsIndexView
+  'view:blog/post' //=> Blog.PostView
+  'view:basic' //=> Ember.View
+  'foo:post' //=> App.PostFoo
+  ```
+
+  @class DefaultResolver
+  @namespace Ember
+  @extends Ember.Object
+*/
+Ember.DefaultResolver = Ember.Object.extend({
+  /**
+    This will be set to the Application instance when it is
+    created.
+
+    @property namespace
+  */
+  namespace: null,
+  /**
+    This method is called via the container's resolver method.
+    It parses the provided `fullName` and then looks up and
+    returns the appropriate template or class.
+
+    @method resolve
+    @param {String} fullName the lookup string
+    @return {Object} the resolved factory
+  */
+  resolve: function(fullName) {
+    var parsedName = this.parseName(fullName),
+        typeSpecificResolveMethod = this[parsedName.resolveMethodName];
+    if (typeSpecificResolveMethod) {
+      var resolved = typeSpecificResolveMethod.call(this, parsedName);
+      if (resolved) { return resolved; }
+    }
+    return this.resolveOther(parsedName);
+  },
+  /**
+    Convert the string name of the form "type:name" to
+    a Javascript object with the parsed aspects of the name
+    broken out.
+
+    @protected
+    @method parseName
+  */
+  parseName: function(fullName) {
+    var nameParts = fullName.split(":"),
+        type = nameParts[0], fullNameWithoutType = nameParts[1],
+        name = fullNameWithoutType,
+        namespace = get(this, 'namespace'),
+        root = namespace;
+
+    if (type !== 'template' && name.indexOf('/') !== -1) {
+      var parts = name.split('/');
+      name = parts[parts.length - 1];
+      var namespaceName = capitalize(parts.slice(0, -1).join('.'));
+      root = Ember.Namespace.byName(namespaceName);
+
+      Ember.assert('You are looking for a ' + name + ' ' + type + ' in the ' + namespaceName + ' namespace, but the namespace could not be found', root);
+    }
+
+    return {
+      fullName: fullName,
+      type: type,
+      fullNameWithoutType: fullNameWithoutType,
+      name: name,
+      root: root,
+      resolveMethodName: "resolve" + classify(type)
+    };
+  },
+  /**
+    Look up the template in Ember.TEMPLATES
+
+    @protected
+    @method resolveTemplate
+  */
+  resolveTemplate: function(parsedName) {
+    var templateName = parsedName.fullNameWithoutType.replace(/\./g, '/');
+
+    if (Ember.TEMPLATES[templateName]) {
+      return Ember.TEMPLATES[templateName];
+    }
+
+    templateName = decamelize(templateName);
+    if (Ember.TEMPLATES[templateName]) {
+      return Ember.TEMPLATES[templateName];
+    }
+  },
+  /**
+    Given a parseName object (output from `parseName`), apply
+    the conventions expected by `Ember.Router`
+
+    @protected
+    @method useRouterNaming
+  */
+  useRouterNaming: function(parsedName) {
+    parsedName.name = parsedName.name.replace(/\./g, '_');
+    if (parsedName.name === 'basic') {
+      parsedName.name = '';
+    }
+  },
+  /**
+    @protected
+    @method resolveController
+  */
+  resolveController: function(parsedName) {
+    this.useRouterNaming(parsedName);
+    return this.resolveOther(parsedName);
+  },
+  /**
+    @protected
+    @method resolveRoute
+  */
+  resolveRoute: function(parsedName) {
+    this.useRouterNaming(parsedName);
+    return this.resolveOther(parsedName);
+  },
+  /**
+    @protected
+    @method resolveView
+  */
+  resolveView: function(parsedName) {
+    this.useRouterNaming(parsedName);
+    return this.resolveOther(parsedName);
+  },
+  /**
+    Look up the specified object (from parsedName) on the appropriate
+    namespace (usually on the Application)
+
+    @protected
+    @method resolveOther
+  */
+  resolveOther: function(parsedName) {
+    var className = classify(parsedName.name) + classify(parsedName.type),
+        factory = get(parsedName.root, className);
+    if (factory) { return factory; }
+  }
+});
+
+})();
+
+
+
+(function() {
+/**
+@module ember
+@submodule ember-application
+*/
+
 var get = Ember.get, set = Ember.set,
     classify = Ember.String.classify,
     capitalize = Ember.String.capitalize,
@@ -27645,9 +27856,7 @@ var Application = Ember.Application = Ember.Namespace.extend({
 
     this._super();
 
-    if (!Ember.testing || Ember.testingDeferred) {
-      this.scheduleInitialize();
-    }
+    this.scheduleInitialize();
 
     if ( Ember.LOG_VERSION ) {
       Ember.LOG_VERSION = false; // we only need to see this once per Application#init
@@ -27959,6 +28168,13 @@ var Application = Ember.Application = Ember.Namespace.extend({
   */
   ready: Ember.K,
 
+  /**
+    Set this to provide an alternate class to `Ember.DefaultResolver`
+
+    @property resolver
+  */
+  resolver: null,
+
   willDestroy: function() {
     Ember.BOOTED = false;
 
@@ -28056,44 +28272,12 @@ Ember.Application.reopenClass({
   @return {any} the resolved value for a given lookup
 */
 function resolverFor(namespace) {
+  var resolverClass = namespace.get('resolver') || Ember.DefaultResolver;
+  var resolver = resolverClass.create({
+    namespace: namespace
+  });
   return function(fullName) {
-    var nameParts = fullName.split(":"),
-        type = nameParts[0], name = nameParts[1],
-        root = namespace;
-
-    if (type === 'template') {
-      var templateName = name.replace(/\./g, '/');
-
-      if (Ember.TEMPLATES[templateName]) {
-        return Ember.TEMPLATES[templateName];
-      }
-
-      templateName = decamelize(templateName);
-      if (Ember.TEMPLATES[templateName]) {
-        return Ember.TEMPLATES[templateName];
-      }
-    }
-
-    if (type === 'controller' || type === 'route' || type === 'view') {
-      name = name.replace(/\./g, '_');
-      if (name === 'basic') {
-        name = '';
-      }
-    }
-
-    if (type !== 'template' && name.indexOf('/') !== -1) {
-      var parts = name.split('/');
-      name = parts[parts.length - 1];
-      var namespaceName = capitalize(parts.slice(0, -1).join('.'));
-      root = Ember.Namespace.byName(namespaceName);
-
-      Ember.assert('You are looking for a ' + name + ' ' + type + ' in the ' + namespaceName + ' namespace, but it could not be found', root);
-    }
-
-    var className = classify(name) + classify(type);
-    var factory = get(root, className);
-
-    if (factory) { return factory; }
+    return resolver.resolve(fullName);
   };
 }
 
@@ -29467,8 +29651,8 @@ Ember States
 
 
 })();
-// Version: v1.0.0-rc.1-188-gb6bb967
-// Last commit: b6bb967 (2013-03-16 18:09:42 -0700)
+// Version: v1.0.0-rc.1-203-ga1cbd22
+// Last commit: a1cbd22 (2013-03-18 10:31:41 -0700)
 
 
 (function() {
