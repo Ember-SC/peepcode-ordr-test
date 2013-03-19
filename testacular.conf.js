@@ -12,18 +12,17 @@ preprocessors = {
 
 // list of files / patterns to load in the browser
 files = [
-  MOCHA,
-  MOCHA_ADAPTER,
-  "js/tests/chai.js",
-  "js/libs/jquery-1.8.3.min.js",
-  "js/libs/handlebars.js",
-  "js/libs/ember.js",
-  "js/libs/ember-data.js",
-  "js/tests/before_app.js",
-  "js/templates.js",
-  "js/app.js",
-  "js/tests/after_app.js",
-  "js/tests/generated/*.js"
+  JASMINE,
+  JASMINE_ADAPTER,
+  "app/js/libs/jquery-1.8.3.min.js",
+  "app/js/libs/handlebars.js",
+  "app/js/libs/ember.js",
+  "app/js/libs/ember-data.js",
+  "tests/support/before_app.js",
+  "app/js/templates.js",
+  "app/js/app.js",
+  "tests/support/after_app.js",
+  "tests/unit/*.js"
 ];
 
 
