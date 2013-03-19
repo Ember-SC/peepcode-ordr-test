@@ -1,31 +1,15 @@
 {
-  "framework": "mocha",
-  "before_tests": "coffee -o js/tests/generated/ -c js/tests/tests/",
-  "after_tests": "rm js/test/generated/*.js",
-  "on_exit": "rm js/tests/generated/*.js",
+  "framework": "jasmine",
   "src_files": [
-    "js/tests/chai.js",
-    "js/libs/jquery-1.8.3.min.js",
-    "js/libs/handlebars.js",
-    "js/libs/ember.js",
-    "js/libs/ember-data.js",
-    "js/tests/before_app.js",
-    "js/app.js",
-    "js/tests/after_app.js",
-    "js/tests/tests/**/*.coffee",
-    "js/tests/tests/**/*.js"
-  ],
-  "serve_files": [
-    "js/tests/chai.js",
-    "js/libs/jquery-1.8.3.min.js",
-    "js/libs/handlebars.js",
-    "js/libs/ember.js",
-    "js/libs/ember-data.js",
-    "js/tests/before_app.js",
-    "js/templates.js",
-    "js/app.js",
-    "js/tests/after_app.js",
-    "js/tests/tests/**/*.js",
-    "js/tests/generated/*.js"
+    "app/js/libs/jquery-1.8.3.min.js",
+    "app/js/libs/handlebars.js",
+    "app/js/libs/ember.js",
+    "app/js/libs/ember-data.js",
+    "tests/support/before_app.js",
+    "app/js/templates.js",
+    "app/js/app.js",
+    "tests/support/after_app.js",
+    "tests/unit/**/*.js",
+    "tests/integration/**/*.js"
   ]
 }
