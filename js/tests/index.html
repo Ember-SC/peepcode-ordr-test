@@ -5,17 +5,21 @@
   <title>Peepcode Ordr Integration Tests</title>
 
   <!-- Test Libs -->
-  <link rel="stylesheet" href="./qunit-1.11.0.css">
-  <script src="./qunit-1.11.0.js"></script>
+  <link rel="stylesheet" type="text/css" href="./jasmine.css">
   <style type="text/css">
-    #qunit-fixture, #app-root {
-      position: relative;
+    #HTMLReporter, #app-root {
+      position: absolute;
       top: 0;
       left: 0;
-      width: auto;
-      height: auto;
+      width: 100%;
+    }
+    #app-root {
+      top: 50%;
     }
   </style>
+  <script type="text/javascript" src="./jasmine.js"></script>
+  <script type="text/javascript" src="./jasmine-html.js"></script>
+
   <!-- App libs -->
   <script src="../libs/jquery-1.9.1.js"></script>
   <script src="../libs/handlebars.js"></script>
@@ -99,7 +103,32 @@
 
   <script src="../app.js"></script>
 
+  <!-- include spec files here... -->
   <!-- Integration tests -->
-  <script src="./tests/integration.js"></script>
+  <script type="text/javascript" src="./tests/integration.js"></script>
+
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var htmlReporter = new jasmine.HtmlReporter();
+
+      jasmineEnv.addReporter(htmlReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+
+      // Ordr app
+      setTimeout(function () {
+        //window.App.ready(function() {
+          jasmineEnv.execute();
+        //});
+      }, 1000);
+
+    }());
+  </script>
+
 </body>
 </html>

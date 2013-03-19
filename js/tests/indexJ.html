@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Peepcode Ordr Application Spec Runner</title>
+  <link rel="shortcut icon" type="image/png" href="./lib/jasmine-1.3.1/jasmine_favicon.png">
+  <link rel="stylesheet" type="text/css" href="./lib/jasmine-1.3.1/jasmine.css">
+  <style type="text/css">
+    #HTMLReporter, #app-root {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    #app-root {
+      top: 50%;
+    }
+  </style>
+  <script type="text/javascript" src="./lib/jasmine-1.3.1/jasmine.js"></script>
+  <script type="text/javascript" src="./lib/jasmine-1.3.1/jasmine-html.js"></script>
+  <!-- module system -->
+  <script type="text/javascript" src="./public/js/minispade.js"></script>
+</head>
+
+<body>
+  <!-- Ordr App -->
+  <div id="app-root"></div>
+
+  <!-- include source files here... -->
+  <!-- Built Libraries -->
+  <script src="./public/js/libs.js"></script>
+  <!-- Built application -->
+  <script src="./public/js/templates.js"></script>
+  <script src="./public/js/modules.js"></script>
+  <script src="./public/js/app.js"></script>
+
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="spec/integration.js"></script>
+
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var htmlReporter = new jasmine.HtmlReporter();
+
+      jasmineEnv.addReporter(htmlReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+
+      // Ordr app
+      setTimeout(function () {
+        //window.App.ready(function() {
+          jasmineEnv.execute();
+        //});
+      }, 1000);
+
+    }());
+  </script>
+</body>
+
+</html>

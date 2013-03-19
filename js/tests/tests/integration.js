@@ -1,102 +1,161 @@
-App.ready = function() {
+/*global window,App,Ember,jQuery,$,minispade,describe,it,runs,waits*/
 
-  module('Peepcode Ordr Application Integration Tests');
+describe('Peepcode Ordr Application Integration Tests', function () {
+  var q;
 
-  test('Given (6) six tables: add food items to the tab on table 1, verify the items/prices on tabs for table 1 and 4', function () {
-    var q;
+  // Select within qunit fixture element
+  q = function (query) {
+    return Ember.$(query, '#app-root');
+  };
+  // Select text and trim
+  q.trimText = function (query) {
+    return Ember.$.trim( q(query).text() );
+  };
 
-    expect(17);
+  it('should display the h1 and h2 headings on tables index route', function () {
+    waits(250);
 
-    // Test helpers
-    q = function (query) {
-      // Select within qunit fixture element
-      return Ember.$(query, '#app-root');
-    };
-    q.trimText = function (query) {
-      return Ember.$.trim( q(query).text() );
-    };
-
-    // Headings on tables index route
-    setTimeout(function() {
-      start();
+    runs(function () {
       document.location.hash = "/tables";
-      equal(q.trimText('h1'), 'Ordr', 'Heading is "Ordr".');
-      equal(q.trimText('#order h2'), 'Select a table at left', 'Tables index heading correct.');
-      stop();
-    }, 500);
+    });
 
-    // Common table menu
-    setTimeout(function() {
-      var menuItems;
-      start();
+    waits(500);
 
+    runs(function () {
+      expect(q.trimText('h1')).toEqual('Ordr');
+      expect(q.trimText('#order h2')).toEqual('Select a table at left');
+    });
+  });
+
+  it('should list six (6) tables in a common menu', function () {
+    var menuItems;
+
+    waits(750);
+
+    runs(function () {
+      document.location.hash = "/tables";
+    });
+
+    waits(125);
+
+    runs(function () {
       menuItems = q('#tables a');
-      equal(menuItems.length, 6, '6 tables in menu.');
-      for (var i = 0; i < 6; i++) {
-        equal(q.trimText(menuItems[i]), i + 1, 'Passed table menu #' + i + ' is numbered as expected.');
-      }
+    });
 
+    waits(125);
+
+    runs(function () {
+      var menuItem;
+      expect(menuItems.length).toBe(6);
+      for (var i = 0; i < 6; i++) {
+        menuItem = q.trimText(menuItems[i]);
+        expect(parseInt(menuItem), 10).toBe(i + 1);
+      }
+    });
+  });
+
+  it('should display a menu with five (5) food choices, ready to add to tab for table 1', function () {
+    waits(1375);
+
+    runs(function () {
       // Select table 1
       document.location.hash = "/tables/1";
-      stop();
-    }, 1000);
+    });
 
-    // Foods menu
-    setTimeout(function() {
-      start();
-      equal(q('#menu li > a').length, 5, 'Food menu has (5) items.');
-      equal(q.trimText('#order h2'), 'Table 1', 'Table 1 Heading correct.');
+    waits(125);
 
-      // Add pizza to tap on table 1
+    runs(function () {
+      expect(q('#menu li > a').length).toBe(5);
+      expect(q.trimText('#order h2')).toBe('Table 1');
+    });
+  });
+
+  it('should add pizza to tap on table 1', function () {
+    waits(1875);
+
+    runs(function () {
+      document.location.hash = "/tables/1";
+    });
+
+    waits(125);
+
+    runs(function () {
       q('#menu li:eq(0) > a').trigger('click');
-      stop();
-    }, 1500);
+    });
 
-    // Confirm pizza added to tab on table 1
-    setTimeout(function() {
-      start();
-      equal(q.trimText('#customer-tab li:eq(0) > h3'), 'Pizza $15.00', 'Pizza added to customer tab.');
+    waits(125);
 
-      // Add fries to tab on table 1
+    runs(function () {
+      expect(q.trimText('#customer-tab li:eq(0) > h3')).toBe('Pizza $15.00');
+    });
+  });
+
+  it('should add fries to tap on table 1', function () {
+    waits(2375);
+
+    runs(function () {
+      document.location.hash = "/tables/1";
+    });
+
+    waits(125);
+
+    runs(function () {
       q('#menu li:eq(2) > a').trigger('click');
-      stop();
-    }, 2000);
+    });
 
-    // Confirm fries added to tab on table 1
-    setTimeout(function() {
-      start();
-      equal(q.trimText('#customer-tab li:eq(1) > h3'), 'Fries $7.00', 'Fries added to customer tab.');
-      equal(q.trimText('#total span'), '$22.00', '$22.00 is the total for fries and pizza.');
+    waits(125);
 
+    runs(function () {
+      expect(q.trimText('#customer-tab li:eq(1) > h3')).toBe('Fries $7.00');
+      expect(q.trimText('#total span')).toBe('$22.00');
+    });
+  });
+
+  it('should confirm foods already added to tab on table 4', function () {
+    var actual = [], expected = 'Pizza$15.00Pancakes$3.00Fries$7.00HotDog$9.50BirthdayCake$20.00Total$54.50';
+
+    waits(2750);
+
+    runs(function () {
       // Select table 4
       document.location.hash = "/tables/4";
-      stop();
-    }, 2500);
+    });
 
-    // Confirm foods already in tab on table 4
-    setTimeout(function() {
-      var actual = [], expected = 'Pizza$15.00Pancakes$3.00Fries$7.00HotDog$9.50BirthdayCake$20.00Total$54.50';
+    waits(250);
 
-      start();
+    runs(function () {
       q('#customer-tab > li').each(function () {
         actual.push(q.trimText(this));
       });
-      equal(actual.join('').replace(/\s/g, ''), expected, 'table 4 has expected foods in tab.');
-      equal(q.trimText('#total span'), '$54.50', '$54.50 is the total tab for table 4.');
+    });
 
-      // Select table 1
-      document.location.hash = "/tables/1";
-      stop();
-    }, 3000);
+    waits(125);
 
-    // Table 1 still has a total after viewing table 4
-    setTimeout(function() {
-      start();
-      equal(q.trimText('#total span'), '$22.00', '$22.00 is still the total for table 1.');
-      document.location.hash = "/tables";
-    }, 3500);
-
-    stop();
+    runs(function () {
+      expect(actual.join('').replace(/\s/g, '')).toBe(expected);
+      expect(q.trimText('#total span')).toBe('$54.50');
+    });
   });
 
-}
+  it('should table 1 still has a total of $22 after viewing table 4', function () {
+    var actual = [], expected = 'Pizza$15.00Pancakes$3.00Fries$7.00HotDog$9.50BirthdayCake$20.00Total$54.50';
+
+    waits(3375);
+
+    runs(function () {
+      // Select table 1
+      document.location.hash = "/tables/1";
+    });
+
+    waits(125);
+
+    runs(function () {
+      expect(q.trimText('#total span')).toBe('$22.00');
+
+      // done back to start...
+      document.location.hash = "/tables";
+    });
+  });
+
+});
+

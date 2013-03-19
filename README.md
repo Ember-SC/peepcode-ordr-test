@@ -41,7 +41,7 @@ feedback/etc and/or come join us!
 1.  open http://localhost:3000/js/tests/
 
 
-QUnit test scripts here:
+Jasmine test scripts here:
 
     js/tests/tests/*
 
