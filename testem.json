@@ -6,7 +6,6 @@
   "src_files": [
     "js/tests/chai.js",
     "js/libs/jquery-1.9.0.js",
-    "js/libs/handlebars.js",
     "js/libs/ember.js",
     "js/libs/ember-data.js",
     "js/tests/before_app.js",
@@ -18,7 +17,6 @@
   "serve_files": [
     "js/tests/chai.js",
     "js/libs/jquery-1.9.0.js",
-    "js/libs/handlebars.js",
     "js/libs/ember.js",
     "js/libs/ember-data.js",
     "js/tests/before_app.js",
