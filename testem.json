@@ -11,7 +11,7 @@
     "js/tests/before_app.js",
     "js/app.js",
     "js/tests/after_app.js",
-    "js/tests/tests/**/*.coffee",
+    "js/tests/tests/**/verify_tables_spec.coffee",
     "js/tests/tests/**/*.js"
   ],
   "serve_files": [
@@ -24,6 +24,6 @@
     "js/app.js",
     "js/tests/after_app.js",
     "js/tests/tests/**/*.js",
-    "js/tests/generated/*.js"
+    "js/tests/generated/verify_tables_spec.js"
   ]
 }
