@@ -150,8 +150,8 @@ Ember.deprecateFunc = function(message, func) {
 
 })();
 
-// Version: v1.0.0-rc.1-203-ga1cbd22
-// Last commit: a1cbd22 (2013-03-18 10:31:41 -0700)
+// Version: v1.0.0-rc.1-207-g8173f98
+// Last commit: 8173f98 (2013-03-19 19:55:18 -0700)
 
 
 (function() {
@@ -8002,17 +8002,19 @@ Ember.Enumerable = Ember.Mixin.create({
   },
 
   /**
-    Returns a copy of the array with all null elements removed.
+    Returns a copy of the array with all null and undefined elements removed.
 
     ```javascript
-    var arr = ["a", null, "c", null];
+    var arr = ["a", null, "c", undefined];
     arr.compact();  // ["a", "c"]
     ```
 
     @method compact
-    @return {Array} the array without null elements.
+    @return {Array} the array without null and undefined elements.
   */
-  compact: function() { return this.without(null); },
+  compact: function() {
+    return this.filter(function(value) { return value != null; });
+  },
 
   /**
     Returns a new enumerable that excludes the passed value. The default

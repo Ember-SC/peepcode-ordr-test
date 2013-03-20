@@ -150,8 +150,8 @@ Ember.deprecateFunc = function(message, func) {
 
 })();
 
-// Version: v1.0.0-rc.1-203-ga1cbd22
-// Last commit: a1cbd22 (2013-03-18 10:31:41 -0700)
+// Version: v1.0.0-rc.1-207-g8173f98
+// Last commit: 8173f98 (2013-03-19 19:55:18 -0700)
 
 
 (function() {
@@ -8002,17 +8002,19 @@ Ember.Enumerable = Ember.Mixin.create({
   },
 
   /**
-    Returns a copy of the array with all null elements removed.
+    Returns a copy of the array with all null and undefined elements removed.
 
     ```javascript
-    var arr = ["a", null, "c", null];
+    var arr = ["a", null, "c", undefined];
     arr.compact();  // ["a", "c"]
     ```
 
     @method compact
-    @return {Array} the array without null elements.
+    @return {Array} the array without null and undefined elements.
   */
-  compact: function() { return this.without(null); },
+  compact: function() {
+    return this.filter(function(value) { return value != null; });
+  },
 
   /**
     Returns a new enumerable that excludes the passed value. The default
@@ -15891,14 +15893,19 @@ Ember.View = Ember.CoreView.extend(
       observer = target;
       target = null;
     }
+
     var view = this,
         stateCheckedObserver = function(){
           view.currentState.invokeObserver(this, observer);
+        },
+        scheduledObserver = function() {
+          Ember.run.scheduleOnce('render', this, stateCheckedObserver);
         };
-    Ember.addObserver(root, path, target, stateCheckedObserver);
+
+    Ember.addObserver(root, path, target, scheduledObserver);
 
     this.one('willClearRender', function() {
-      Ember.removeObserver(root, path, target, stateCheckedObserver);
+      Ember.removeObserver(root, path, target, scheduledObserver);
     });
   }
 
@@ -20409,10 +20416,10 @@ Ember.Handlebars.registerBoundHelper = function(name, fn) {
 
     view.appendChild(bindView);
 
-    view.registerObserver(pathRoot, path, bindView, rerenderBoundHelperView);
+    view.registerObserver(pathRoot, path, bindView, bindView.rerender);
 
     for (var i=0, l=dependentKeys.length; i<l; i++) {
-      view.registerObserver(pathRoot, path + '.' + dependentKeys[i], bindView, rerenderBoundHelperView);
+      view.registerObserver(pathRoot, path + '.' + dependentKeys[i], bindView, bindView.rerender);
     }
   }
 
@@ -20476,20 +20483,9 @@ function evaluateMultiPropertyBoundHelper(context, fn, normalizedProperties, opt
   // Observe each property.
   for (loc = 0, len = watchedProperties.length; loc < len; ++loc) {
     property = watchedProperties[loc];
-    view.registerObserver(property.root, property.path, bindView, rerenderBoundHelperView);
+    view.registerObserver(property.root, property.path, bindView, bindView.rerender);
   }
 
-}
-
-/**
-  @private
-
-  An observer function used with bound helpers which
-  will schedule a re-render of the _SimpleHandlebarsView
-  connected with the helper.
-*/
-function rerenderBoundHelperView() {
-  Ember.run.scheduleOnce('render', this, 'rerender');
 }
 
 /**
@@ -21534,17 +21530,13 @@ EmberHandlebars.registerHelper('bindAttr', function(options) {
       Ember.View.applyAttributeBindings(elem, attr, result);
     };
 
-    invoker = function() {
-      Ember.run.scheduleOnce('render', observer);
-    };
-
     // Add an observer to the view for when the property changes.
     // When the observer fires, find the element using the
     // unique data id and update the attribute to the new value.
     // Note: don't add observer when path is 'this' or path
     // is whole keyword e.g. {{#each x in list}} ... {{bindAttr attr="x"}}
     if (path !== 'this' && !(normalized.isKeyword && normalized.path === '' )) {
-      view.registerObserver(normalized.root, normalized.path, invoker);
+      view.registerObserver(normalized.root, normalized.path, observer);
     }
 
     // if this changes, also change the logic in ember-views/lib/views/view.js
@@ -21658,12 +21650,8 @@ EmberHandlebars.bindClasses = function(context, classBindings, view, bindAttrId,
       }
     };
 
-    invoker = function() {
-      Ember.run.scheduleOnce('render', observer);
-    };
-
     if (path !== '' && path !== 'this') {
-      view.registerObserver(pathRoot, path, invoker);
+      view.registerObserver(pathRoot, path, observer);
     }
 
     // We've already setup the observer; now we just need to figure out the
@@ -29651,8 +29639,8 @@ Ember States
 
 
 })();
-// Version: v1.0.0-rc.1-203-ga1cbd22
-// Last commit: a1cbd22 (2013-03-18 10:31:41 -0700)
+// Version: v1.0.0-rc.1-207-g8173f98
+// Last commit: 8173f98 (2013-03-19 19:55:18 -0700)
 
 
 (function() {
