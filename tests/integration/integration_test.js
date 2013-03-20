@@ -23,10 +23,11 @@ describe('initializing the app', function() {
     it(' sends me to tables.index on first load', function() {
       var path, anchors, selectText, tableNumber, customerTabText;
       Ember.run(function() {
-        resetApp();
-        Ember.run.schedule('actions', this, function() {
-          expect(App.isInitialized).toEqual(true);
-        });
+        setTestMode();
+//        resetApp();
+//        Ember.run.schedule('actions', this, function() {
+//          expect(App.isInitialized).toEqual(true);
+//        });
       });
 //      waits(500);
 //      runs(function(){});
