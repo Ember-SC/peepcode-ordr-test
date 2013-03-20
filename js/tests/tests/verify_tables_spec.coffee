@@ -10,19 +10,19 @@ describe 'Tables', ->
     anchors = false
     Ember.run ->
       anchors = $('#tables a')
-    Ember.run.later ( ->
-      expect(anchors.length).to.equal(6)
-      expect(select = $('div.eight h2').text()).to.equal("Select a table at left")
-    ), 50
+      Ember.run.schedule('action', this,  ->
+        expect(anchors.length).to.equal(6)
+        expect(select = $('div.eight h2').text()).to.equal("Select a table at left")
+      )
     done()
 
   it 'clicking on table 2 shows tab for table', (done) ->
     Ember.run ->
       table2 = $("[href='/tables/2']")
       table2.click()
-    Ember.run.later ( ->
-      tableNumber = $('div.nine h2 span').text()
-      expect(tableNumber).to.equal('2')
-      expect($('#customer-tab li h3:first').text()).to.equal("Click a food to add it")
-    ), 100
+      Ember.run.schedule('action', this, ->
+        tableNumber = $('div.nine h2 span').text()
+        expect(tableNumber).to.equal('2')
+        expect($('#customer-tab li h3:first').text()).to.equal("Click a food to add it")
+      )
     done()
