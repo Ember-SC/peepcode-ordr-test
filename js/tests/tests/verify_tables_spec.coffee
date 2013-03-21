@@ -7,6 +7,7 @@
 describe 'Tables', ->
 
   it 'should have 6', (done) ->
+    resetApp()
     anchors = false
     Ember.run ->
       anchors = $('#tables a')
@@ -23,14 +24,3 @@ describe 'Tables', ->
         expect($('#customer-tab li h3:first').text()).to.equal("Click a food to add it")
       )
     done()
-
-#  it 'clicking on table 2 shows tab for table', (done) ->
-#    Ember.run ->
-#      table2 = $("[href='/tables/2']")
-#      table2.click()
-#      Ember.run.schedule('action', this, ->
-#        tableNumber = $('div.nine h2 span').text()
-#        expect(tableNumber).to.equal('2')
-#        expect($('#customer-tab li h3:first').text()).to.equal("Click a food to add it")
-#      )
-#    done()
