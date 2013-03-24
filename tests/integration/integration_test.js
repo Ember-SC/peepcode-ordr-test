@@ -4,46 +4,6 @@ var tables = $('#tables a');
 var tableNumber = $('div.nine h2 span').text();
 var total = $('#total h3 span').text();
 var addFoodText = $('#customer-tab li h3')[0].firstChild
-*/
-asyncTest("Integration test", function(){
-  var tableNumber, customerTabText, promise;
-  // Ember.run(function(){
-  //   promise = new Ember.RSVP.Promise();
-  // });
-  expect(1);
-  resetApp();
-  equal(helper.path(), "tables.index", "The current path is tables.index");
-  start();
-  // stop();
-
-  // Ember.run(function() {
-  //   $("[href='/tables/2']").click();
-  //   Ember.run.schedule('actions', this, function(){
-  //     promise.resolve('done');
-  //   });
-  // });
-  // promise.then(function(){
-  //   tableNumber = $('div.nine h2 span').text();
-  //   customerTabText = $('#customer-tab li h3:first').text();
-  //   equal(tableNumber, "2", "Table number is 2");
-  //   // equal(customerTabText, "Click a food to add it", "Placeholder text is visible");
-  //   start();
-  // });
-});
-// describe('initializing the app', function() {
-
-//   beforeEach(function(){
-//       resetApp();
-//       waits(200);
-//       runs(function(){});
-//   });
-
-//   describe('Integration tests', function(){
-
-//     it(' sends me to tables.index on first load', function() {
-//       expect(helper.path()).toEqual('tables.index');
-
-//     });
 
     // it('tables.index should display 6 tables', function() {
     //   var anchors, selectText;
@@ -68,7 +28,38 @@ asyncTest("Integration test", function(){
     //     expect(customerTabText).toEqual("Click a food to add it");
     //   });
     // });
+*/
 
-//   });
+asyncTest("Integration test", function(){
+  var tables, tableNumber, customerTabText, promise;
+  promise = new Ember.RSVP.Promise();
+  expect(2);
+  // resetApp();
+  setTimeout(function(){
+    console.log("IM READY");
+    window.helper = testing(App);
+    promise.resolve();
+  }, 200);
+  promise.then(function(){
+    console.log("PROMISE RESOLVED");
+    tables = $('#tables a');
+    equal(helper.path(), "tables.index", "The current path is tables.index");
+    equal(tables.length, 6, "There are six tables present.");
+    start();
+  });
 
-// });
+  // Ember.run(function() {
+  //   $("[href='/tables/2']").click();
+  //   Ember.run.schedule('actions', this, function(){
+  //     promise.resolve('done');
+  //   });
+  // });
+  // promise.then(function(){
+  //   tableNumber = $('div.nine h2 span').text();
+  //   customerTabText = $('#customer-tab li h3:first').text();
+  //   // equal(tableNumber, "2", "Table number is 2");
+  //   ok(true);
+  //   // equal(customerTabText, "Click a food to add it", "Placeholder text is visible");
+  //   start();
+  // });
+});
