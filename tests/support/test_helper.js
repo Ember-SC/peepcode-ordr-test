@@ -34,8 +34,8 @@ var testing = function(app){
         lastSetURL: function(){
             return router.location.lastSetURL;
         },
-        navigateTo: function(path){
-            window.location.replace(path);
+        navigateTo: function(url){
+            return router.handleURL(url);
         }
     };
     return helper;

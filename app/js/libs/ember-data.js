@@ -1,4 +1,4 @@
-// Last commit: 57d6c01 (2013-03-18 11:27:29 -0700)
+// Last commit: 5fd6d65 (2013-03-28 01:13:50 +0100)
 
 
 (function() {
@@ -3567,9 +3567,9 @@ DS.Model = Ember.Object.extend(Ember.Evented, LoadPromise, {
     return store.serialize(this, options);
   },
 
-  toJSON: function() {
+  toJSON: function(options) {
     var serializer = DS.JSONSerializer.create();
-    return serializer.serialize(this);
+    return serializer.serialize(this, options);
   },
 
   didLoad: Ember.K,
@@ -3664,6 +3664,9 @@ DS.Model = Ember.Object.extend(Ember.Evented, LoadPromise, {
 
   clearRelationships: function() {
     this.eachRelationship(function(name, relationship) {
+      // if the relationship is unmaterialized, move on
+      if (this.cacheFor(name) === undefined) { return; }
+
       if (relationship.kind === 'belongsTo') {
         set(this, name, null);
       } else if (relationship.kind === 'hasMany') {
@@ -4328,6 +4331,7 @@ DS.Model.reopenClass({
         }
 
         if (!types.contains(type)) {
+          Ember.assert("Trying to sideload " + name + " on " + this.toString() + " but the type doesn't exist.", !!type);
           types.push(type);
         }
       }
@@ -6358,8 +6362,6 @@ DS.JSONTransforms = {
 
         return dayOfWeek + ", " + dayOfMonth + " " + month + " " + utcYear + " " +
                pad(utcHours) + ":" + pad(utcMinutes) + ":" + pad(utcSeconds) + " GMT";
-      } else if (date === undefined) {
-        return undefined;
       } else {
         return null;
       }
@@ -8326,18 +8328,20 @@ function hasManyProcessorFactory(store, record, relationship) {
   };
 }
 
-function CreateProcessor(record, store, type) {
+function SaveProcessor(record, store, type, includeId) {
   this.record = record;
-  ObjectProcessor.call(this, record.toJSON(), type, store);
+  ObjectProcessor.call(this, record.toJSON({ includeId: includeId }), type, store);
 }
 
-CreateProcessor.prototype = Ember.create(ObjectProcessor.prototype);
+SaveProcessor.prototype = Ember.create(ObjectProcessor.prototype);
 
-CreateProcessor.prototype.save = function() {};
+SaveProcessor.prototype.save = function(callback) {
+  callback(this.json);
+};
 
-function createProcessorFactory(store, type) {
+function saveProcessorFactory(store, type, includeId) {
   return function(record) {
-    return new CreateProcessor(record, store, type);
+    return new SaveProcessor(record, store, type, includeId);
   };
 }
 
@@ -8381,8 +8385,17 @@ DS.BasicAdapter = DS.Adapter.extend({
 
   createRecord: function(store, type, record) {
     var sync = type.sync;
+    sync.createRecord(record, saveProcessorFactory(store, type));
+  },
 
-    sync.createRecord(record, createProcessorFactory(store, type));
+  updateRecord: function(store, type, record) {
+    var sync = type.sync;
+    sync.updateRecord(record, saveProcessorFactory(store, type, true));
+  },
+
+  deleteRecord: function(store, type, record) {
+    var sync = type.sync;
+    sync.deleteRecord(record, saveProcessorFactory(store, type, true));
   }
 });
 

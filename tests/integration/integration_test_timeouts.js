@@ -1,7 +1,7 @@
 test('Using setTimeout:  Given (6) six tables: add food items to the tab on table 1, verify the items/prices on tabs for table 1 and 4', function () {
   var q;
 
-  expect(17);
+  expect(16);
 
   // Test helpers
   q = function (query) {
@@ -11,17 +11,13 @@ test('Using setTimeout:  Given (6) six tables: add food items to the tab on tabl
   q.trimText = function (query) {
     return Ember.$.trim( q(query).text() );
   };
-  setTimeout(function() {
-    resetApp();
-  }, 200);
 
   // Headings on tables index route
   setTimeout(function() {
     start();
-    document.location.hash = "/tables";
     equal(q.trimText('h1'), 'Ordr', 'Heading is "Ordr".');
-    equal(q.trimText('#order h2'), 'Select a table at left', 'Tables index heading correct.');
     stop();
+    document.location.hash = "/tables";
   }, 500);
 
   // Common table menu

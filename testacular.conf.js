@@ -23,7 +23,8 @@ files = [
   "app/js/app.js",
   "tests/support/test_helper.js",
   "tests/support/after_app.js",
-  "tests/integration/**/*.js"
+  "tests/integration/**/*.js",
+  "tests/unit/**/*.js"
 ];
 
 
@@ -67,7 +68,7 @@ autoWatch = true;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['Chrome', 'PhantomJS', 'Firefox', 'Safari'];
+browsers = ['Chrome', 'Firefox'];
 
 
 // If browser does not capture in given timeout [ms], kill it
