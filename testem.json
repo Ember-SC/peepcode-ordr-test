@@ -1,5 +1,5 @@
 {
-  "framework": "jasmine",
+  "framework": "qunit",
   "src_files": [
     "app/js/libs/jquery-1.8.3.min.js",
     "app/js/libs/handlebars.js",
@@ -8,6 +8,7 @@
     "tests/support/before_app.js",
     "app/js/templates.js",
     "app/js/app.js",
+    "tests/support/test_helper.js",
     "tests/support/after_app.js",
     "tests/unit/**/*.js",
     "tests/integration/**/*.js"

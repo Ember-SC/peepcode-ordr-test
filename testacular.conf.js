@@ -12,8 +12,8 @@ preprocessors = {
 
 // list of files / patterns to load in the browser
 files = [
-  JASMINE,
-  JASMINE_ADAPTER,
+  QUNIT,
+  QUNIT_ADAPTER,
   "app/js/libs/jquery-1.8.3.min.js",
   "app/js/libs/handlebars.js",
   "app/js/libs/ember.js",
@@ -21,8 +21,10 @@ files = [
   "tests/support/before_app.js",
   "app/js/templates.js",
   "app/js/app.js",
+  "tests/support/test_helper.js",
   "tests/support/after_app.js",
-  "tests/unit/*.js"
+  "tests/integration/**/*.js",
+  "tests/unit/**/*.js"
 ];
 
 
@@ -66,7 +68,7 @@ autoWatch = true;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['Chrome', 'PhantomJS'];
+browsers = ['Chrome', 'Firefox'];
 
 
 // If browser does not capture in given timeout [ms], kill it
