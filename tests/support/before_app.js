@@ -7,4 +7,4 @@ function setTestMode() {
     location: 'none'
   });
 }
-setTestMode();
+// setTestMode();

@@ -5,49 +5,52 @@ var tableNumber = $('div.nine h2 span').text();
 var total = $('#total h3 span').text();
 var addFoodText = $('#customer-tab li h3')[0].firstChild
 */
-describe('initializing the app', function() {
-
-  beforeEach(function(){
-      resetApp();
-      waits(200);
-      runs(function(){});
-  });
-
-  describe('Integration tests', function(){
-
-    it(' sends me to tables.index on first load', function() {
-      var path;
-      path = '';
-      Ember.run(function() {
-        path = App.__container__.lookup('controller:application').get('currentPath');
-      });
-      expect(path).toEqual('tables.index');
+module("Integration Test 1", {
+  setup: function() {
+    stop()
+    App.then(function(){
+        window.helper = testing(App);
+        start();
     });
+  },
 
-    it('tables.index should display 6 tables', function() {
-      var anchors, selectText;
-      Ember.run(function() {
-        anchors = $('#tables a');
-        selectText = $('div.eight h2').text();
-      });
-      expect(anchors.length).toEqual(6);
-      expect(selectText).toEqual("Select a table at left");
+  teardown: function(){
+    stop();
+    App.reset();
+    App.then(function(){
+        start();
     });
-    
-    it('clicking on table 2 shows tab for table', function(done) {
-      var tableNumber, customerTabText;
-      Ember.run(function() {
-        $("[href='/tables/2']").click();
-      });
-      waits(100);
-      runs(function() {
-        tableNumber = $('div.nine h2 span').text();
-        customerTabText = $('#customer-tab li h3:first').text();
-        expect(tableNumber).toEqual('2');
-        expect(customerTabText).toEqual("Click a food to add it");
-      });
+  }
+});
+
+test("App is ready ", function(){
+    var tables;
+    expect(2);
+    tables = $('#tables a');
+    equal(helper.path(), "tables.index", "The current path is tables.index");
+    equal(tables.length, 6, "There are six tables present.");
+});
+
+test("test navigateTo helper", function(){
+    var tableNumber, customerTabText;
+    Ember.run(function() {
+        helper.navigateTo('/tables/2');
     });
+    equal(helper.path(), "tables.table", "The current path is tables.table");
+    tableNumber = $('div.nine h2 span').text();
+    customerTabText = $('#customer-tab li h3:first').text();
+    equal(tableNumber, "2", "Table number is 2");
+    equal(customerTabText, "Click a food to add it", "Placeholder text is visible");
+});
 
-  });
-
+test("test using jquery selector and click() can do the same thing", function(){
+    var tableNumber, customerTabText;
+    Ember.run(function() {
+        Ember.$("[href='#/tables/5']").click();
+    });
+    equal(helper.lastSetURL(), "/tables/5", "Last set URL is tables/5");
+    tableNumber = $('div.nine h2 span').text();
+    customerTabText = $('#customer-tab li h3:first').text();
+    equal(tableNumber, "5", "Table number is 5");
+    equal(customerTabText, "Click a food to add it", "Placeholder text is visible");
 });
