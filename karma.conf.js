@@ -1,13 +1,9 @@
-// Testacular configuration
-// Generated on Fri Mar 15 2013 11:59:17 GMT-0700 (PDT)
+// Karma configuration
+// Generated on Mon Apr 01 2013 20:42:23 GMT-0700 (PDT)
 
 
 // base path, that will be used to resolve files and exclude
 basePath = '';
-
-preprocessors = {
-  "*.coffee": "coffee"
-};
 
 
 // list of files / patterns to load in the browser
@@ -68,7 +64,7 @@ autoWatch = true;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['Chrome', 'Firefox'];
+browsers = ['Chrome'];
 
 
 // If browser does not capture in given timeout [ms], kill it
