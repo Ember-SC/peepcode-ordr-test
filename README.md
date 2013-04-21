@@ -19,12 +19,11 @@ is a perfect application to experiment upon:
     * Exploits EmberJS features (which it should since it's an EmberJS tutorial!)
 
 Hence, it's a reasonable "smallest realistic" Ember app to "play with".  So here we're playing
-with [testem](https://github.com/airportyh/testem) to perform integration testing on the **Ordr** application.
+with [JS Karma](https://github.com/karma-runner/karma) as the test runner to run integration tests on the **Ordr** application.
 
 # Maturity
 
-We just built this on March 5, 2013; but we got docs and a running test!  We're going to be testing
-numerous different testing metaphors and will be documenting them as we go along.  Please offer suggestions/
+We're going to be testing numerous different testing metaphors and will be documenting them as we go along.  Please offer suggestions/
 feedback/etc and/or come join us!
 
 # Installation
@@ -33,20 +32,25 @@ feedback/etc and/or come join us!
 
         git clone git@github.com:OC-Emberjs/peepcode-ordr-test.git
 
-1.  Install [testem](https://github.com/airportyh/testem).
-1.  In a console window:
+2.  Install [JS Karma](https://github.com/karma-runner/karma).
+    
+    Karma config expects Firefox and Chrome installed.
+
+3.  In a console window:
 
         cd peepcode-ordr-test
-        bundle install
-        testem
+        karma start
 
-1.  Observe that ```testem``` is running.
-1.  Connect browsers to ```testem``` as documented by ```testem```.
-1.  Observe test results both in connected browsers and in ```testem``` browser page itself.
 
-At this point, we have coffee-based test scripts here:
+At this point, we have test scripts here:
 
-    js/tests/tests/*
+    tests/integration/*
+
+And the App sits at:
+
+    app/*
+
+
 
 
 # Credits
