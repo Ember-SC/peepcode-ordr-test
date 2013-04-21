@@ -34,10 +34,14 @@
     sortProperties: ['id']
   });
 
+  App.TableController = Ember.ObjectController.extend({
+
+  });
+
   App.FoodController = Ember.ArrayController.extend({
+    needs: "table",
     addFood: function(food) {
-      var table = this.controllerFor('table').get('model'),
-          tabItems = table.get('tab.tabItems');
+      var tabItems = this.get('controllers.table.tab.tabItems');
 
       tabItems.createRecord({
         food: food,
