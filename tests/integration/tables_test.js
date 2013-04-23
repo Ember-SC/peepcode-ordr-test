@@ -11,7 +11,7 @@ module("/tables", {
   },
 
   teardown: function(){
-    Ember.run(App, App.reset);
+    App.reset();
   }
 });
 
