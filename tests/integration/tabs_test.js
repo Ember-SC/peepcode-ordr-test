@@ -4,7 +4,7 @@ module("tabs ", {
   },
 
   teardown: function(){
-    Ember.run(App, App.reset);
+    App.reset();
   }
 });
 
@@ -15,7 +15,7 @@ test('Add pizza to table 1', function(){
     return click('#menu li:eq(0) > a');
   }).then(function(){
     equal(find('#customer-tab li:eq(0) > h3').text(), 'Pizza $15.00', 'Pizza added to customer tab.');
-    equal(find('#total span').text(), '$45.00', '$15.00 is the total'); // This is wrong but making it pass w/ wrong data.
+    equal(find('#total span').text(), '$15.00', '$15.00 is the total'); // This is wrong but making it pass w/ wrong data.
     visit('/tables/3').then(function(){
       equal(find('div.nine h2 span').text(), "3", "Table number is 3");
       visit('/tables/1').then(function(){
