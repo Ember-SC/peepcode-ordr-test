@@ -14,6 +14,8 @@ files = [
   "app/js/libs/handlebars.js",
   "app/js/libs/ember.js",
   "app/js/libs/ember-data.js",
+  "tests/support/pavlov.js",
+  "tests/support/test_helper.js",
   "tests/support/before_app.js",
   "app/js/templates.js",
   "app/js/app.js",

@@ -2,8 +2,8 @@
   "predef": [
     "$",
     "App",
-    "beforeEach",
-    "chai",
+    "before",
+    "after",
     "console",
     "describe",
     "Ember",
@@ -30,7 +30,12 @@
     "strictEqual",
     "module",
     "expect",
-    "minispade"
+    "visit",
+    "find",
+    "click",
+    "fillIn",
+    "wait",
+    "pavlov"
   ],
 
   "node" : false,
