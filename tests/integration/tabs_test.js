@@ -13,15 +13,15 @@ pavlov.specify("Ordr App integration tests", function(){
     it("should add pizza to table 1", function () {
       expect(5);
       visit('/tables/1').then(function(){
-        equal(find('div.nine h2 span').text(), "1", "Table number is 1");
+        assert(find('div.nine h2 span').text()).equals("1", "Table number is 1");
         return click('#menu li:eq(0) > a');
       }).then(function(){
-        equal(find('#customer-tab li:eq(0) > h3').text(), 'Pizza $15.00', 'Pizza added to customer tab.');
-        equal(find('#total span').text(), '$15.00', '$15.00 is the total'); // This is wrong but making it pass w/ wrong data.
+        assert(find('#customer-tab li:eq(0) > h3').text()).equals('Pizza $15.00', 'Pizza added to customer tab.');
+        assert(find('#total span').text()).equals('$15.00', '$15.00 is the total'); // This is wrong but making it pass w/ wrong data.
         visit('/tables/3').then(function(){
-          equal(find('div.nine h2 span').text(), "3", "Table number is 3");
+          assert(find('div.nine h2 span').text()).equals("3", "Table number is 3");
           visit('/tables/1').then(function(){
-            equal(find('#customer-tab li:eq(0) > h3').text(), 'Pizza $15.00', 'Pizza still on table 1 tab.');
+            assert(find('#customer-tab li:eq(0) > h3').text()).equals('Pizza $15.00', 'Pizza still on table 1 tab.');
           });
         });
       });
@@ -34,8 +34,8 @@ pavlov.specify("Ordr App integration tests", function(){
         find('#customer-tab > li').each(function () {
           actual.push(find(this).text());
         });
-        equal(actual.join('').replace(/\s/g, ''), expected, 'table 4 has expected foods in tab.');
-        equal(find('#total span').text(), '$54.50', '$54.50 is the total tab for table 4.');
+        assert(actual.join('').replace(/\s/g, '')).equals(expected, 'table 4 has expected foods in tab.');
+        assert(find('#total span').text()).equals('$54.50', '$54.50 is the total tab for table 4.');
       });
     });
   });

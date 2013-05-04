@@ -22,17 +22,17 @@ pavlov.specify("Ordr App integration tests", function(){
 
     it("should display six tables when launching the app", function () {
       visit('/').then(function () {
-        equal(testing(App).path(), 'tables.index', "'/' redirects to '/tables'");
-        equal(find('#tables a').length, 6, "There are six tables present.");
+        assert(testing(App).path()).equals('tables.index', "'/' redirects to '/tables'");
+        assert(find('#tables a').length).equals(6, "There are six tables present.");
       });
     });
 
     it("should display foods to add to tab on table 2", function () {
       expect(3);
       visit('/tables/2').then(function () {
-        equal(find('div.nine h2 span').text(), "2", "Table number is 2");
-        equal(find('#customer-tab li h3:first').text(), "Click a food to add it", "Placeholder text is visible");
-        equal(find('#menu li > a').length, 5, 'Food menu has (5) items.');
+        assert(find('div.nine h2 span').text()).equals("2", "Table number is 2");
+        assert(find('#customer-tab li h3:first').text()).equals("Click a food to add it", "Placeholder text is visible");
+        assert(find('#menu li > a').length).equals(5, 'Food menu has (5) items.');
       });
     });
   });
