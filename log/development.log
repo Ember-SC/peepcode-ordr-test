@@ -1,0 +1,2154 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/support/pavlov.js" for 127.0.0.1 at 2013-05-05 22:19:54 -0700
+
+ActionController::RoutingError (No route matches [GET] "/support/pavlov.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.4ms)
+
+
+Started GET "/js/libs/jquery-1.8.3.min.js" for 127.0.0.1 at 2013-05-05 22:19:54 -0700
+
+ActionController::RoutingError (No route matches [GET] "/js/libs/jquery-1.8.3.min.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/css/app.css" for 127.0.0.1 at 2013-05-05 22:19:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/css/app.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/js/libs/jquery-1.8.3.min.js" for 127.0.0.1 at 2013-05-05 22:19:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/js/libs/jquery-1.8.3.min.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/css/app.css" for 127.0.0.1 at 2013-05-05 22:19:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/css/app.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/js/libs/ember.js" for 127.0.0.1 at 2013-05-05 22:19:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/js/libs/ember.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/js/libs/handlebars.js" for 127.0.0.1 at 2013-05-05 22:19:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/js/libs/handlebars.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/css/foundation.css" for 127.0.0.1 at 2013-05-05 22:19:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/css/foundation.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/js/libs/ember-data.js" for 127.0.0.1 at 2013-05-05 22:19:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/js/libs/ember-data.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/js/app.js" for 127.0.0.1 at 2013-05-05 22:19:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/js/app.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/support/pavlov.js" for 127.0.0.1 at 2013-05-05 22:20:03 -0700
+
+ActionController::RoutingError (No route matches [GET] "/support/pavlov.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/support/pavlov.js" for 127.0.0.1 at 2013-05-05 22:22:36 -0700
+
+ActionController::RoutingError (No route matches [GET] "/support/pavlov.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-05 22:22:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-05 22:22:41 -0700
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-05 22:22:42 -0700
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-05 22:24:59 -0700
+
+ActionController::RoutingError (uninitialized constant WelcomeController):
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:229:in `constantize'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__1399146102941726378__call__2835691611693860073__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/billheat/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/billheat/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-05 22:28:21 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Compiled foundation.css  (0ms)  (pid 22877)
+Compiled app.css  (0ms)  (pid 22877)
+Compiled application.css  (48ms)  (pid 22877)
+Compiled jquery-1.8.3.min.js  (0ms)  (pid 22877)
+Compiled handlebars.js  (1ms)  (pid 22877)
+Compiled ember.js  (12ms)  (pid 22877)
+Compiled ember-data.js  (1ms)  (pid 22877)
+Compiled templates.js  (0ms)  (pid 22877)
+Compiled app.js  (0ms)  (pid 22877)
+Compiled application.js  (184ms)  (pid 22877)
+Completed 200 OK in 321ms (Views: 320.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-05 22:28:21 -0700
+Served asset /application.css - 200 OK (36ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-05-05 22:28:21 -0700
+Served asset /foundation.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-05-05 22:28:21 -0700
+Served asset /jquery-1.8.3.min.js - 200 OK (3ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2013-05-05 22:28:21 -0700
+Served asset /app.css - 200 OK (2ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-05-05 22:28:21 -0700
+Served asset /handlebars.js - 200 OK (2ms)
+
+
+Started GET "/assets/ember.js?body=1" for 127.0.0.1 at 2013-05-05 22:28:21 -0700
+Served asset /ember.js - 200 OK (4ms)
+
+
+Started GET "/assets/ember-data.js?body=1" for 127.0.0.1 at 2013-05-05 22:28:21 -0700
+Served asset /ember-data.js - 200 OK (4ms)
+
+
+Started GET "/assets/templates.js?body=1" for 127.0.0.1 at 2013-05-05 22:28:21 -0700
+Served asset /templates.js - 200 OK (2ms)
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2013-05-05 22:28:21 -0700
+Served asset /app.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-05 22:28:21 -0700
+Served asset /application.js - 200 OK (57ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-05 22:29:13 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-05 22:29:13 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-05-05 22:29:13 -0700
+Served asset /foundation.css - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-05-05 22:29:13 -0700
+Served asset /handlebars.js - 200 OK (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2013-05-05 22:29:13 -0700
+Served asset /app.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-05-05 22:29:13 -0700
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/ember.js?body=1" for 127.0.0.1 at 2013-05-05 22:29:13 -0700
+Served asset /ember.js - 200 OK (0ms)
+
+
+Started GET "/assets/ember-data.js?body=1" for 127.0.0.1 at 2013-05-05 22:29:13 -0700
+Served asset /ember-data.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates.js?body=1" for 127.0.0.1 at 2013-05-05 22:29:13 -0700
+Served asset /templates.js - 200 OK (0ms)
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2013-05-05 22:29:13 -0700
+Served asset /app.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-05 22:29:13 -0700
+Served asset /application.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-05 22:37:23 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2013-05-05 22:37:23 -0700
+Served asset /app.css - 200 OK (0ms)
+
+
+Started GET "/assets/ember.js?body=1" for 127.0.0.1 at 2013-05-05 22:37:23 -0700
+Served asset /ember.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-05 22:37:23 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-05-05 22:37:23 -0700
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-05-05 22:37:23 -0700
+Served asset /foundation.css - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-05-05 22:37:23 -0700
+Served asset /handlebars.js - 200 OK (0ms)
+
+
+Started GET "/assets/ember-data.js?body=1" for 127.0.0.1 at 2013-05-05 22:37:23 -0700
+Served asset /ember-data.js - 200 OK (0ms)
+
+
+Started GET "/assets/templates.js?body=1" for 127.0.0.1 at 2013-05-05 22:37:23 -0700
+Served asset /templates.js - 200 OK (0ms)
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2013-05-05 22:37:23 -0700
+Served asset /app.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-05 22:37:23 -0700
+Served asset /application.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-05 22:59:28 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-05-05 22:59:29 -0700
+Served asset /foundation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-05 22:59:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ember.js?body=1" for 127.0.0.1 at 2013-05-05 22:59:29 -0700
+Served asset /ember.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2013-05-05 22:59:29 -0700
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-05-05 22:59:29 -0700
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-05-05 22:59:29 -0700
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ember-data.js?body=1" for 127.0.0.1 at 2013-05-05 22:59:29 -0700
+Served asset /ember-data.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates.js?body=1" for 127.0.0.1 at 2013-05-05 22:59:29 -0700
+Served asset /templates.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-05 22:59:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2013-05-05 22:59:29 -0700
+Served asset /app.js - 304 Not Modified (0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (6.0ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+Compiled pavlov.js  (1ms)  (pid 23453)
+Compiled konacha/parent.js  (2ms)  (pid 23453)
+Compiled qunit.js  (3ms)  (pid 23453)
+Compiled qunit.css  (3ms)  (pid 23453)
+Served asset /pavlov.js - 200 OK (36ms)
+Served asset /konacha/parent.js - 200 OK (48ms)
+Served asset /qunit.js - 200 OK (56ms)
+Compiled konacha.css  (76ms)  (pid 23453)
+Served asset /konacha.css - 200 OK (99ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (39.4ms)
+Completed 500 Internal Server Error in 45ms
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (25.9ms)
+Completed 500 Internal Server Error in 31ms
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-05 23:01:30 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-05 23:01:30 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-05-05 23:01:30 -0700
+Served asset /foundation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars.js?body=1" for 127.0.0.1 at 2013-05-05 23:01:30 -0700
+Served asset /handlebars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2013-05-05 23:01:30 -0700
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-05-05 23:01:30 -0700
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ember.js?body=1" for 127.0.0.1 at 2013-05-05 23:01:30 -0700
+Served asset /ember.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ember-data.js?body=1" for 127.0.0.1 at 2013-05-05 23:01:30 -0700
+Served asset /ember-data.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templates.js?body=1" for 127.0.0.1 at 2013-05-05 23:01:30 -0700
+Served asset /templates.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2013-05-05 23:01:30 -0700
+Served asset /app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-05 23:01:30 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (4.6ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 304 Not Modified (13ms)
+Served asset /pavlov.js - 304 Not Modified (15ms)
+Served asset /qunit.js - 304 Not Modified (17ms)
+Served asset /konacha/parent.js - 304 Not Modified (12ms)
+Processing by Konacha::SpecsController#iframe as HTML
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (23.3ms)
+Completed 500 Internal Server Error in 29ms
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (26.4ms)
+Completed 500 Internal Server Error in 37ms
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (5.3ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+Served asset /konacha/parent.js - 304 Not Modified (2ms)
+Served asset /konacha.css - 304 Not Modified (19ms)
+Served asset /qunit.js - 304 Not Modified (15ms)
+Served asset /pavlov.js - 304 Not Modified (6ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (16.1ms)
+Completed 500 Internal Server Error in 25ms
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (32.4ms)
+Completed 500 Internal Server Error in 41ms
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (4.6ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+Served asset /konacha/parent.js - 200 OK (7ms)
+Served asset /konacha.css - 200 OK (11ms)
+Served asset /pavlov.js - 200 OK (4ms)
+Served asset /qunit.js - 200 OK (12ms)
+Processing by Konacha::SpecsController#iframe as HTML
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Parameters: {"name"=>"integration/tables_test"}
+Compiled support/before_app.js  (0ms)  (pid 23525)
+Compiled support/before_app.js  (0ms)  (pid 23525)
+Compiled support/after_app.js  (0ms)  (pid 23525)
+Compiled support/after_app.js  (2ms)  (pid 23525)
+Compiled spec_helper.js  (107ms)  (pid 23525)
+Compiled spec_helper.js  (106ms)  (pid 23525)
+Compiled integration/tabs_test.js  (125ms)  (pid 23525)
+Compiled integration/tables_test.js  (118ms)  (pid 23525)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (290.6ms)
+Completed 200 OK in 295ms (Views: 293.3ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (288.8ms)
+Completed 200 OK in 293ms (Views: 291.5ms | ActiveRecord: 0.0ms)
+Served asset /support/before_app.js - 200 OK (5ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (14ms)
+Served asset /handlebars.js - 200 OK (4ms)
+Served asset /templates.js - 200 OK (1ms)
+Served asset /app.js - 200 OK (1ms)
+Served asset /ember-data.js - 200 OK (12ms)
+Served asset /support/after_app.js - 200 OK (2ms)
+Served asset /application.css - 200 OK (51ms)
+Served asset /ember.js - 200 OK (105ms)
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /integration/tables_test.js - 200 OK (73ms)
+Served asset /application.js - 200 OK (101ms)
+Served asset /spec_helper.js - 200 OK (174ms)
+Served asset /spec_helper.js - 304 Not Modified (0ms)
+Served asset /integration/tabs_test.js - 200 OK (145ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.7ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.4ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (5.5ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.4ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+Compiled support/before_app.js  (0ms)  (pid 23525)
+Compiled spec_helper.js  (35ms)  (pid 23525)
+Compiled integration/tables_test.js  (2ms)  (pid 23525)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (196.3ms)
+Completed 200 OK in 201ms (Views: 198.6ms | ActiveRecord: 0.0ms)
+Compiled spec_helper.js  (13ms)  (pid 23525)
+Compiled integration/tabs_test.js  (3ms)  (pid 23525)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (278.9ms)
+Completed 200 OK in 283ms (Views: 281.4ms | ActiveRecord: 0.0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (7ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (45ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (37ms)
+Served asset /integration/tabs_test.js - 200 OK (65ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.1ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.2ms)
+  Parameters: {"name"=>"integration/tabs_test"}
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.1ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (3.4ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+Compiled support/before_app.js  (0ms)  (pid 23525)
+Compiled spec_helper.js  (5ms)  (pid 23525)
+Compiled integration/tables_test.js  (2ms)  (pid 23525)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (145.3ms)
+Completed 200 OK in 150ms (Views: 147.8ms | ActiveRecord: 0.0ms)
+Compiled spec_helper.js  (8ms)  (pid 23525)
+Compiled integration/tabs_test.js  (3ms)  (pid 23525)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (235.3ms)
+Completed 200 OK in 242ms (Views: 240.2ms | ActiveRecord: 0.0ms)
+Served asset /support/before_app.js - 200 OK (4ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (43ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (73ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (33ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (5.6ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (20ms)
+Served asset /qunit.js - 200 OK (14ms)
+Served asset /konacha/parent.js - 200 OK (7ms)
+Served asset /pavlov.js - 200 OK (48ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (75.1ms)
+Completed 200 OK in 78ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (80.9ms)
+Completed 200 OK in 85ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+Served asset /support/before_app.js - 200 OK (2ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (17ms)
+Served asset /handlebars.js - 200 OK (19ms)
+Served asset /ember.js - 200 OK (54ms)
+Served asset /application.css - 200 OK (69ms)
+Served asset /application.css - 200 OK (60ms)
+Served asset /spec_helper.js - 200 OK (106ms)
+Served asset /templates.js - 200 OK (2ms)
+Served asset /ember-data.js - 200 OK (10ms)
+Served asset /app.js - 200 OK (1ms)
+Served asset /support/after_app.js - 200 OK (3ms)
+Served asset /spec_helper.js - 200 OK (1ms)
+Served asset /application.js - 200 OK (85ms)
+Served asset /integration/tabs_test.js - 200 OK (38ms)
+Served asset /integration/tables_test.js - 200 OK (55ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 38ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (3.0ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Compiled support/before_app.js  (0ms)  (pid 23730)
+Compiled support/before_app.js  (0ms)  (pid 23730)
+Compiled jquery-1.8.3.min.js  (0ms)  (pid 23730)
+Compiled jquery-1.8.3.min.js  (1ms)  (pid 23730)
+Compiled handlebars.js  (1ms)  (pid 23730)
+Compiled handlebars.js  (1ms)  (pid 23730)
+Compiled ember.js  (11ms)  (pid 23730)
+Compiled ember.js  (13ms)  (pid 23730)
+Compiled ember-data.js  (3ms)  (pid 23730)
+Compiled ember-data.js  (2ms)  (pid 23730)
+Compiled templates.js  (0ms)  (pid 23730)
+Compiled app.js  (0ms)  (pid 23730)
+Compiled templates.js  (3ms)  (pid 23730)
+Compiled application.js  (264ms)  (pid 23730)
+Compiled application.js  (284ms)  (pid 23730)
+Compiled support/after_app.js  (1ms)  (pid 23730)
+Compiled support/after_app.js  (0ms)  (pid 23730)
+Compiled spec_helper.js  (315ms)  (pid 23730)
+Compiled spec_helper.js  (328ms)  (pid 23730)
+Compiled integration/tables_test.js  (339ms)  (pid 23730)
+Compiled integration/tabs_test.js  (346ms)  (pid 23730)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (482.3ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (491.0ms)
+Completed 200 OK in 489ms (Views: 487.9ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 494ms (Views: 493.0ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (2ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (6ms)
+Served asset /spec_helper.js - 200 OK (115ms)
+Served asset /spec_helper.js - 200 OK (82ms)
+Served asset /integration/tabs_test.js - 200 OK (83ms)
+Served asset /integration/tables_test.js - 200 OK (103ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.5ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.9ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.4ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.8ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.6ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.5ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (6.2ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+Compiled konacha/parent.js  (0ms)  (pid 23817)
+Compiled qunit.css  (4ms)  (pid 23817)
+Compiled qunit.js  (7ms)  (pid 23817)
+Served asset /konacha/parent.js - 200 OK (59ms)
+Compiled pavlov.js  (10ms)  (pid 23817)
+Served asset /qunit.js - 200 OK (67ms)
+Served asset /pavlov.js - 200 OK (71ms)
+Compiled konacha.css  (90ms)  (pid 23817)
+Served asset /konacha.css - 200 OK (103ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+Compiled support/before_app.js  (0ms)  (pid 23817)
+Compiled support/before_app.js  (3ms)  (pid 23817)
+Compiled jquery-1.8.3.min.js  (1ms)  (pid 23817)
+Compiled jquery-1.8.3.min.js  (1ms)  (pid 23817)
+Compiled handlebars.js  (1ms)  (pid 23817)
+Compiled handlebars.js  (5ms)  (pid 23817)
+Compiled ember.js  (40ms)  (pid 23817)
+Compiled ember.js  (58ms)  (pid 23817)
+Compiled ember-data.js  (30ms)  (pid 23817)
+Compiled ember-data.js  (2ms)  (pid 23817)
+Compiled templates.js  (0ms)  (pid 23817)
+Compiled app.js  (0ms)  (pid 23817)
+Compiled app.js  (0ms)  (pid 23817)
+Compiled application.js  (223ms)  (pid 23817)
+Compiled application.js  (227ms)  (pid 23817)
+Compiled support/after_app.js  (0ms)  (pid 23817)
+Compiled support/after_app.js  (0ms)  (pid 23817)
+Compiled spec_helper.js  (342ms)  (pid 23817)
+Compiled spec_helper.js  (342ms)  (pid 23817)
+Compiled integration/tabs_test.js  (358ms)  (pid 23817)
+Compiled integration/tables_test.js  (377ms)  (pid 23817)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (461.4ms)
+Completed 200 OK in 467ms (Views: 465.1ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (486.6ms)
+Completed 200 OK in 491ms (Views: 489.1ms | ActiveRecord: 0.0ms)
+Served asset /support/before_app.js - 200 OK (14ms)
+Compiled foundation.css  (2ms)  (pid 23817)
+Served asset /handlebars.js - 200 OK (45ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (62ms)
+Compiled app.css  (0ms)  (pid 23817)
+Compiled foundation.css  (6ms)  (pid 23817)
+Served asset /templates.js - 200 OK (2ms)
+Compiled application.css  (35ms)  (pid 23817)
+Compiled app.css  (0ms)  (pid 23817)
+Served asset /app.js - 200 OK (3ms)
+Compiled application.css  (42ms)  (pid 23817)
+Served asset /application.css - 200 OK (87ms)
+Served asset /application.css - 200 OK (56ms)
+Served asset /ember-data.js - 200 OK (33ms)
+Served asset /support/after_app.js - 200 OK (2ms)
+Served asset /spec_helper.js - 200 OK (174ms)
+Served asset /ember.js - 200 OK (191ms)
+Served asset /application.js - 200 OK (100ms)
+Served asset /spec_helper.js - 200 OK (98ms)
+Served asset /integration/tables_test.js - 200 OK (100ms)
+Served asset /integration/tabs_test.js - 200 OK (113ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (4.8ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+Compiled qunit.css  (0ms)  (pid 23915)
+Compiled konacha.css  (18ms)  (pid 23915)
+Compiled qunit.js  (2ms)  (pid 23915)
+Compiled konacha/parent.js  (3ms)  (pid 23915)
+Compiled pavlov.js  (3ms)  (pid 23915)
+Served asset /konacha.css - 200 OK (94ms)
+Served asset /pavlov.js - 200 OK (80ms)
+Served asset /qunit.js - 200 OK (86ms)
+Served asset /konacha/parent.js - 200 OK (83ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+Compiled support/before_app.js  (0ms)  (pid 23915)
+Compiled support/before_app.js  (3ms)  (pid 23915)
+Compiled jquery-1.8.3.min.js  (0ms)  (pid 23915)
+Compiled jquery-1.8.3.min.js  (1ms)  (pid 23915)
+Compiled handlebars.js  (1ms)  (pid 23915)
+Compiled handlebars.js  (1ms)  (pid 23915)
+Compiled ember.js  (39ms)  (pid 23915)
+Compiled ember.js  (51ms)  (pid 23915)
+Compiled ember-data.js  (2ms)  (pid 23915)
+Compiled ember-data.js  (8ms)  (pid 23915)
+Compiled templates.js  (0ms)  (pid 23915)
+Compiled templates.js  (0ms)  (pid 23915)
+Compiled app.js  (0ms)  (pid 23915)
+Compiled app.js  (0ms)  (pid 23915)
+Compiled application.js  (258ms)  (pid 23915)
+Compiled application.js  (262ms)  (pid 23915)
+Compiled support/after_app.js  (0ms)  (pid 23915)
+Compiled support/after_app.js  (2ms)  (pid 23915)
+Compiled spec_helper.js  (317ms)  (pid 23915)
+Compiled spec_helper.js  (320ms)  (pid 23915)
+Compiled integration/tables_test.js  (369ms)  (pid 23915)
+Compiled integration/tabs_test.js  (366ms)  (pid 23915)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (531.8ms)
+Completed 200 OK in 535ms (Views: 533.7ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (549.6ms)
+Completed 200 OK in 554ms (Views: 552.4ms | ActiveRecord: 0.0ms)
+Served asset /support/before_app.js - 200 OK (8ms)
+Compiled foundation.css  (7ms)  (pid 23915)
+Compiled app.css  (0ms)  (pid 23915)
+Served asset /handlebars.js - 200 OK (15ms)
+Compiled application.css  (23ms)  (pid 23915)
+Served asset /jquery-1.8.3.min.js - 200 OK (21ms)
+Served asset /templates.js - 200 OK (3ms)
+Served asset /application.css - 200 OK (38ms)
+Served asset /ember-data.js - 200 OK (55ms)
+Served asset /app.js - 200 OK (1ms)
+Served asset /support/after_app.js - 200 OK (8ms)
+Served asset /support/before_app.js - 304 Not Modified (0ms)
+Served asset /handlebars.js - 304 Not Modified (0ms)
+Served asset /ember.js - 200 OK (104ms)
+Served asset /spec_helper.js - 200 OK (161ms)
+Served asset /application.js - 200 OK (86ms)
+Served asset /integration/tabs_test.js - 200 OK (83ms)
+Served asset /integration/tables_test.js - 200 OK (85ms)
+Served asset /app.js - 304 Not Modified (0ms)
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+Served asset /templates.js - 304 Not Modified (0ms)
+Served asset /support/after_app.js - 304 Not Modified (0ms)
+Served asset /ember-data.js - 304 Not Modified (0ms)
+Served asset /spec_helper.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /ember.js - 304 Not Modified (0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 5ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.7ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.3ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Served asset /spec_helper.js - 304 Not Modified (0ms)
+Served asset /support/before_app.js - 304 Not Modified (0ms)
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+Served asset /ember-data.js - 304 Not Modified (0ms)
+Served asset /ember.js - 304 Not Modified (0ms)
+Served asset /handlebars.js - 304 Not Modified (0ms)
+Served asset /templates.js - 304 Not Modified (0ms)
+Served asset /app.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /support/after_app.js - 304 Not Modified (0ms)
+Served asset /integration/tabs_test.js - 304 Not Modified (0ms)
+Served asset /integration/tables_test.js - 304 Not Modified (0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (2.7ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (2.7ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Served asset /handlebars.js - 304 Not Modified (0ms)
+Served asset /spec_helper.js - 304 Not Modified (0ms)
+Served asset /support/before_app.js - 304 Not Modified (0ms)
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+Served asset /ember.js - 304 Not Modified (0ms)
+Served asset /ember-data.js - 304 Not Modified (0ms)
+Served asset /templates.js - 304 Not Modified (0ms)
+Served asset /app.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /integration/tabs_test.js - 304 Not Modified (0ms)
+Served asset /integration/tables_test.js - 304 Not Modified (0ms)
+Served asset /support/after_app.js - 304 Not Modified (0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.7ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 304 Not Modified (0ms)
+Served asset /konacha/parent.js - 304 Not Modified (0ms)
+Served asset /pavlov.js - 304 Not Modified (0ms)
+Served asset /qunit.js - 304 Not Modified (0ms)
+Served asset /konacha/parent.js - 304 Not Modified (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (5.4ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.9ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+Served asset /support/before_app.js - 304 Not Modified (0ms)
+Served asset /spec_helper.js - 304 Not Modified (0ms)
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+Served asset /ember.js - 304 Not Modified (0ms)
+Served asset /templates.js - 304 Not Modified (0ms)
+Served asset /handlebars.js - 304 Not Modified (0ms)
+Served asset /ember-data.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /app.js - 304 Not Modified (0ms)
+Served asset /integration/tables_test.js - 304 Not Modified (0ms)
+Served asset /support/after_app.js - 304 Not Modified (0ms)
+Served asset /integration/tabs_test.js - 304 Not Modified (0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.6ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 304 Not Modified (0ms)
+Served asset /pavlov.js - 304 Not Modified (0ms)
+Served asset /qunit.js - 304 Not Modified (0ms)
+Served asset /konacha/parent.js - 304 Not Modified (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.4ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /spec_helper.js - 304 Not Modified (0ms)
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+Served asset /ember.js - 304 Not Modified (0ms)
+Served asset /support/before_app.js - 304 Not Modified (0ms)
+Served asset /handlebars.js - 304 Not Modified (1ms)
+Served asset /ember-data.js - 304 Not Modified (1ms)
+Served asset /app.js - 304 Not Modified (0ms)
+Served asset /support/after_app.js - 304 Not Modified (0ms)
+Served asset /templates.js - 304 Not Modified (0ms)
+Served asset /integration/tables_test.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /integration/tabs_test.js - 304 Not Modified (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.1ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (5.7ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.4ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (3.1ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (2.9ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (6.5ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.7ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (5.8ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (5.2ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (4.4ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (13ms)
+Served asset /konacha/parent.js - 200 OK (5ms)
+Served asset /pavlov.js - 200 OK (5ms)
+Served asset /qunit.js - 200 OK (18ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (78.4ms)
+Completed 200 OK in 85ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (80.3ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+Served asset /support/before_app.js - 200 OK (3ms)
+Compiled konacha/iframe.js  (1ms)  (pid 24085)
+Served asset /jquery-1.8.3.min.js - 200 OK (20ms)
+Served asset /konacha/iframe.js - 200 OK (29ms)
+Served asset /handlebars.js - 200 OK (19ms)
+Served asset /application.css - 200 OK (46ms)
+Served asset /templates.js - 200 OK (4ms)
+Served asset /app.js - 200 OK (2ms)
+Served asset /ember.js - 200 OK (53ms)
+Served asset /ember-data.js - 200 OK (17ms)
+Served asset /spec_helper.js - 200 OK (118ms)
+Served asset /support/after_app.js - 200 OK (7ms)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (158ms)
+Served asset /application.js - 200 OK (78ms)
+Served asset /integration/tables_test.js - 200 OK (87ms)
+Served asset /integration/tabs_test.js - 200 OK (122ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 5ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (3.9ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (11ms)
+Served asset /konacha/parent.js - 200 OK (4ms)
+Served asset /qunit.js - 200 OK (12ms)
+Processing by Konacha::SpecsController#iframe as HTML
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (107.2ms)
+Completed 200 OK in 112ms (Views: 110.2ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (79.2ms)
+Completed 200 OK in 82ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+Served asset /pavlov.js - 200 OK (4ms)
+Served asset /support/before_app.js - 200 OK (2ms)
+Served asset /konacha/iframe.js - 200 OK (16ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (11ms)
+Served asset /handlebars.js - 200 OK (10ms)
+Served asset /application.css - 200 OK (74ms)
+Served asset /application.css - 200 OK (61ms)
+Served asset /templates.js - 200 OK (2ms)
+Served asset /ember-data.js - 200 OK (9ms)
+Served asset /app.js - 200 OK (1ms)
+Served asset /support/after_app.js - 200 OK (5ms)
+Served asset /ember.js - 200 OK (90ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (185ms)
+Served asset /application.js - 200 OK (102ms)
+Served asset /integration/tables_test.js - 200 OK (97ms)
+Served asset /integration/tabs_test.js - 200 OK (47ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.6ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.5ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.3ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (1.7ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.7ms)
+Processing by Konacha::SpecsController#iframe as HTML
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (5.9ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (1ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 37ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.8ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.8ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.8ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (5ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.4ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Parameters: {"name"=>"integration/tabs_test"}
+Compiled support/after_app.js  (0ms)  (pid 24116)
+Compiled spec_helper.js  (8ms)  (pid 24116)
+Compiled integration/tabs_test.js  (3ms)  (pid 24116)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (185.5ms)
+Completed 200 OK in 191ms (Views: 189.5ms | ActiveRecord: 0.0ms)
+Compiled spec_helper.js  (11ms)  (pid 24116)
+Compiled integration/tables_test.js  (3ms)  (pid 24116)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (299.9ms)
+Completed 200 OK in 305ms (Views: 303.4ms | ActiveRecord: 0.0ms)
+Served asset /konacha/iframe.js - 200 OK (10ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (100ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (16ms)
+Served asset /integration/tabs_test.js - 200 OK (55ms)
+Served asset /integration/tables_test.js - 200 OK (100ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.7ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.6ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.2ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (1ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.9ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.9ms)
+  Parameters: {"name"=>"integration/tabs_test"}
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (5.6ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /application.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (4.3ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+Compiled qunit.js  (1ms)  (pid 24188)
+Compiled pavlov.js  (12ms)  (pid 24188)
+Compiled konacha/parent.js  (11ms)  (pid 24188)
+Compiled qunit.css  (8ms)  (pid 24188)
+Served asset /konacha/parent.js - 200 OK (82ms)
+Compiled konacha.css  (83ms)  (pid 24188)
+Served asset /qunit.js - 200 OK (80ms)
+Served asset /konacha.css - 200 OK (105ms)
+Served asset /pavlov.js - 200 OK (103ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+Compiled jquery-1.8.3.min.js  (0ms)  (pid 24188)
+Compiled jquery-1.8.3.min.js  (41ms)  (pid 24188)
+Compiled handlebars.js  (1ms)  (pid 24188)
+Compiled handlebars.js  (5ms)  (pid 24188)
+Compiled ember.js  (40ms)  (pid 24188)
+Compiled ember.js  (48ms)  (pid 24188)
+Compiled ember-data.js  (2ms)  (pid 24188)
+Compiled ember-data.js  (5ms)  (pid 24188)
+Compiled support/before_app.js  (0ms)  (pid 24188)
+Compiled templates.js  (0ms)  (pid 24188)
+Compiled app.js  (0ms)  (pid 24188)
+Compiled app.js  (0ms)  (pid 24188)
+Compiled support/after_app.js  (0ms)  (pid 24188)
+Compiled support/after_app.js  (0ms)  (pid 24188)
+Compiled spec_helper.js  (277ms)  (pid 24188)
+Compiled spec_helper.js  (307ms)  (pid 24188)
+Compiled integration/tables_test.js  (318ms)  (pid 24188)
+Compiled integration/tabs_test.js  (293ms)  (pid 24188)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (470.7ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (436.2ms)
+Completed 200 OK in 480ms (Views: 478.5ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 464ms (Views: 461.8ms | ActiveRecord: 0.0ms)
+Compiled foundation.css  (0ms)  (pid 24188)
+Served asset /handlebars.js - 200 OK (43ms)
+Compiled konacha/iframe.js  (0ms)  (pid 24188)
+Served asset /jquery-1.8.3.min.js - 200 OK (18ms)
+Compiled app.css  (11ms)  (pid 24188)
+Served asset /konacha/iframe.js - 200 OK (24ms)
+Served asset /ember-data.js - 200 OK (63ms)
+Compiled application.css  (78ms)  (pid 24188)
+Compiled application.css  (13ms)  (pid 24188)
+Served asset /support/before_app.js - 200 OK (2ms)
+Served asset /templates.js - 200 OK (1ms)
+Served asset /app.js - 200 OK (8ms)
+Served asset /application.css - 200 OK (44ms)
+Served asset /application.css - 200 OK (118ms)
+Served asset /support/after_app.js - 200 OK (2ms)
+Served asset /ember.js - 200 OK (178ms)
+Served asset /spec_helper.js - 200 OK (92ms)
+Served asset /integration/tabs_test.js - 200 OK (81ms)
+Served asset /integration/tables_test.js - 200 OK (97ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (1.8ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+Served asset /pavlov.js - 304 Not Modified (0ms)
+Served asset /qunit.js - 304 Not Modified (0ms)
+Served asset /konacha/parent.js - 304 Not Modified (0ms)
+Served asset /konacha.css - 304 Not Modified (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.7ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /pavlov.js - 304 Not Modified (0ms)
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+Served asset /konacha/iframe.js - 304 Not Modified (0ms)
+Served asset /handlebars.js - 304 Not Modified (0ms)
+Served asset /ember-data.js - 304 Not Modified (0ms)
+Served asset /ember.js - 304 Not Modified (0ms)
+Served asset /support/before_app.js - 304 Not Modified (0ms)
+Served asset /templates.js - 304 Not Modified (0ms)
+Served asset /app.js - 304 Not Modified (0ms)
+Served asset /spec_helper.js - 304 Not Modified (0ms)
+Served asset /support/after_app.js - 304 Not Modified (0ms)
+Served asset /integration/tables_test.js - 304 Not Modified (0ms)
+Served asset /integration/tabs_test.js - 304 Not Modified (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (4.5ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+Compiled konacha/parent.js  (0ms)  (pid 24222)
+Compiled pavlov.js  (0ms)  (pid 24222)
+Compiled qunit.js  (1ms)  (pid 24222)
+Compiled qunit.css  (6ms)  (pid 24222)
+Served asset /pavlov.js - 200 OK (67ms)
+Served asset /konacha/parent.js - 200 OK (79ms)
+Compiled konacha.css  (82ms)  (pid 24222)
+Served asset /qunit.js - 200 OK (89ms)
+Served asset /konacha.css - 200 OK (106ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+Compiled jquery-1.8.3.min.js  (12ms)  (pid 24222)
+Compiled jquery-1.8.3.min.js  (44ms)  (pid 24222)
+Compiled handlebars.js  (1ms)  (pid 24222)
+Compiled handlebars.js  (1ms)  (pid 24222)
+Compiled ember.js  (41ms)  (pid 24222)
+Compiled ember.js  (51ms)  (pid 24222)
+Compiled ember-data.js  (2ms)  (pid 24222)
+Compiled support/before_app.js  (0ms)  (pid 24222)
+Compiled ember-data.js  (34ms)  (pid 24222)
+Compiled templates.js  (0ms)  (pid 24222)
+Compiled templates.js  (1ms)  (pid 24222)
+Compiled app.js  (0ms)  (pid 24222)
+Compiled app.js  (0ms)  (pid 24222)
+Compiled support/after_app.js  (0ms)  (pid 24222)
+Compiled support/after_app.js  (0ms)  (pid 24222)
+Compiled spec_helper.js  (302ms)  (pid 24222)
+Compiled spec_helper.js  (292ms)  (pid 24222)
+Compiled integration/tables_test.js  (333ms)  (pid 24222)
+Compiled integration/tabs_test.js  (316ms)  (pid 24222)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (471.5ms)
+Completed 200 OK in 476ms (Views: 474.2ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (456.7ms)
+Completed 200 OK in 462ms (Views: 459.7ms | ActiveRecord: 0.0ms)
+Served asset /handlebars.js - 200 OK (14ms)
+Compiled foundation.css  (31ms)  (pid 24222)
+Compiled konacha/iframe.js  (30ms)  (pid 24222)
+Served asset /jquery-1.8.3.min.js - 200 OK (53ms)
+Served asset /support/before_app.js - 200 OK (5ms)
+Compiled app.css  (3ms)  (pid 24222)
+Served asset /templates.js - 200 OK (3ms)
+Served asset /app.js - 200 OK (1ms)
+Served asset /ember-data.js - 200 OK (76ms)
+Served asset /konacha/iframe.js - 200 OK (75ms)
+Compiled application.css  (79ms)  (pid 24222)
+Served asset /support/after_app.js - 200 OK (4ms)
+Served asset /application.css - 200 OK (108ms)
+Served asset /ember.js - 200 OK (154ms)
+Served asset /integration/tabs_test.js - 200 OK (65ms)
+Served asset /spec_helper.js - 200 OK (110ms)
+Served asset /integration/tables_test.js - 200 OK (99ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (1.8ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.9ms)
+  Parameters: {"name"=>"integration/tabs_test"}
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (5.6ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.0ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.3ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (5.9ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+Compiled konacha/iframe.js  (0ms)  (pid 24282)
+Served asset /konacha/iframe.js - 200 OK (53ms)
+Compiled jquery-1.8.3.min.js  (0ms)  (pid 24282)
+Served asset /jquery-1.8.3.min.js - 200 OK (44ms)
+Compiled handlebars.js  (0ms)  (pid 24282)
+Served asset /handlebars.js - 200 OK (7ms)
+Compiled ember.js  (11ms)  (pid 24282)
+Served asset /ember.js - 200 OK (194ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 11ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+Compiled ember-data.js  (29ms)  (pid 24282)
+Served asset /ember-data.js - 200 OK (149ms)
+Compiled support/before_app.js  (0ms)  (pid 24282)
+Served asset /support/before_app.js - 200 OK (6ms)
+Compiled templates.js  (0ms)  (pid 24282)
+Served asset /templates.js - 200 OK (4ms)
+Compiled app.js  (0ms)  (pid 24282)
+Served asset /app.js - 200 OK (6ms)
+Compiled support/after_app.js  (0ms)  (pid 24282)
+Compiled spec_helper.js  (21ms)  (pid 24282)
+Served asset /spec_helper.js - 200 OK (31ms)
+Served asset /support/after_app.js - 200 OK (3ms)
+Compiled integration/tabs_test.js  (53ms)  (pid 24282)
+Served asset /integration/tabs_test.js - 200 OK (62ms)
+Compiled integration/tables_test.js  (58ms)  (pid 24282)
+Served asset /integration/tables_test.js - 200 OK (70ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (6.2ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+Compiled qunit.js  (4ms)  (pid 24282)
+Compiled konacha/parent.js  (3ms)  (pid 24282)
+Compiled pavlov.js  (8ms)  (pid 24282)
+Compiled qunit.css  (2ms)  (pid 24282)
+Served asset /konacha/parent.js - 200 OK (24ms)
+Served asset /qunit.js - 200 OK (39ms)
+Compiled konacha.css  (33ms)  (pid 24282)
+Served asset /konacha.css - 200 OK (63ms)
+Served asset /pavlov.js - 200 OK (58ms)
+Processing by Konacha::SpecsController#iframe as HTML
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (191.1ms)
+Completed 200 OK in 198ms (Views: 196.8ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (196.1ms)
+Completed 200 OK in 206ms (Views: 205.5ms | ActiveRecord: 0.0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Compiled foundation.css  (1ms)  (pid 24282)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Compiled app.css  (0ms)  (pid 24282)
+Compiled foundation.css  (1ms)  (pid 24282)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Compiled application.css  (77ms)  (pid 24282)
+Compiled application.css  (62ms)  (pid 24282)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (86ms)
+Served asset /application.css - 200 OK (109ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (1.9ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.7ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (8.1ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Parameters: {"notrycatch"=>"true"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.3ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.8ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.3ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+Processing by Konacha::SpecsController#parent as HTML
+  Parameters: {"notrycatch"=>"true"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/parent.html.erb (2.6ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Served asset /qunit.js - 200 OK (0ms)
+Served asset /pavlov.js - 200 OK (0ms)
+Served asset /konacha.css - 200 OK (0ms)
+Served asset /konacha/parent.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tables_test"}
+Processing by Konacha::SpecsController#iframe as HTML
+  Parameters: {"name"=>"integration/tabs_test"}
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (4.6ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+  Rendered /Users/billheat/code/community/OC-Emberjs/konacha/app/views/konacha/specs/iframe.html.erb (3.4ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+Served asset /application.css - 200 OK (0ms)
+Served asset /konacha/iframe.js - 200 OK (0ms)
+Served asset /ember-data.js - 200 OK (0ms)
+Served asset /handlebars.js - 200 OK (0ms)
+Served asset /ember.js - 200 OK (0ms)
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+Served asset /support/before_app.js - 200 OK (0ms)
+Served asset /templates.js - 200 OK (0ms)
+Served asset /app.js - 200 OK (0ms)
+Served asset /spec_helper.js - 200 OK (0ms)
+Served asset /integration/tables_test.js - 200 OK (0ms)
+Served asset /support/after_app.js - 200 OK (0ms)
+Served asset /integration/tabs_test.js - 200 OK (0ms)
+Processing by Konacha::SpecsController#parent as */*
+  Parameters: {"path"=>"favicon.ico"}
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
