@@ -1,5 +1,5 @@
 /**
- * Pavlov - Test framework-independent behavioral API
+ * Pavlov Improved - Test framework-independent behavioral API
  *
  * version 0.4.0pre
  *
@@ -8,8 +8,11 @@
  * Copyright (c) 2009-2011 Michael Monteleone
  * Licensed under terms of the MIT License (README.markdown)
  */
-(function (global) {
+/*jshint onevar: false*/
+/*jslint browser: true, vars: true, undef: true, plusplus: true, regexp: true, unparam: true */
 
+(function (global) {
+    'use strict';
     // ===========
     // = Helpers =
     // ===========
@@ -21,9 +24,8 @@
          * @param {Function} callback callback for each iterated item
          */
         each: function (object, callback) {
-            if (typeof object === 'undefined' || typeof callback === 'undefined'
-                || object === null || callback === null) {
-                throw "both 'target' and 'callback' arguments are required";
+            if (object === undefined || callback === undefined || object === null || callback === null) {
+                throw new Error("both 'target' and 'callback' arguments are required");
             }
             var name,
                 i = 0,
@@ -33,15 +35,15 @@
             if (length === undefined) {
                 for (name in object) {
                     if (object.hasOwnProperty(name)) {
-                        if (callback.call( object[name], name, object[name]) === false) {
+                        if (callback.call(object[name], name, object[name]) === false) {
                             break;
                         }
                     }
                 }
             } else {
-                for (value = object[0];
-                    i < length && callback.call(value, i, value) !== false;
-                    value = object[++i]) {
+                value = object[0];
+                while (i < length && callback.call(value, i, value) !== false) {
+                    value = object[++i];
                 }
             }
 
@@ -56,12 +58,24 @@
             return Array.prototype.slice.call(array);
         },
         /**
-         * returns whether or not an object is an array
-         * @param {Object} obj object to test
-         * @returns whether or not object is array
+         * returns the type of any object (in lowercase)
+         * @param  {Mixed} obj object or any other variable
+         * @return {[type]}     [description]
          */
-        isArray: function (obj) {
-            return Object.prototype.toString.call(obj) === "[object Array]";
+        type: function (obj) {
+            if (obj === undefined || obj === null) {
+                return String(obj);
+            }
+            return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
+        },
+        /**
+         * checks if an object is of type type
+         * @param  {String} type e.g. array
+         * @param  {Mixed}  obj  the object to check, e.g. []
+         * @return {Boolean}
+         */
+        is: function (type, object) {
+            return type === util.type(object);
         },
         /**
          * merges properties form one object to another
@@ -69,9 +83,9 @@
          * @param {Object} src object containing properies to merge
          */
         extend: function (dest, src) {
-            if (typeof dest === 'undefined' || typeof src === 'undefined' ||
-                dest === null || src === null) {
-                throw "both 'source' and 'target' arguments are required";
+            if (dest === undefined || src === undefined || dest === null || src === null) {
+                throw new Error("both 'source' and 'target' arguments " +
+                                "are required");
             }
             var prop;
             for (prop in src) {
@@ -81,27 +95,22 @@
             }
         },
         /**
-         * Naive display serializer for objects which wraps the objects'
-         * own toString() value with type-specific delimiters.
-         * [] for array
-         * "" for string
-         * Does not currently go nearly detailed enough for JSON use,
-         * just enough to show small values within test results
-         * @param {Object} obj object to serialize
-         * @returns naive display-serialized string representation of the object
+         * Print a readable version of a value / object / whatever.
+         * @param {mixed} obj the object to display
+         * @param {boolean} [printDetails] also display code of functions
+         * @return {string}
          */
-        serialize: function (obj) {
-            if (typeof obj === 'undefined') {
-                return "";
-            } else if (Object.prototype.toString.call(obj) === "[object Array]") {
-                return '[' + obj.toString() + ']';
-            } else if (Object.prototype.toString.call(obj) === "[object Function]") {
-                return "function()";
-            } else if (typeof obj === "string") {
+        prettyPrint: function (obj, printDetails) {
+            if (util.is('string', obj)) {
                 return '"' + obj + '"';
-            } else {
-                return obj;
             }
+            if (util.is('array', obj)) {
+                return '[' + obj.toString() + ']';
+            }
+            if (util.is('function', obj)) {
+                return printDetails ? obj.toString() : 'function()';
+            }
+            return String(obj);
         },
         /**
          * transforms a camel or pascal case string
@@ -119,7 +128,8 @@
     // = Example Building =
     // ====================
 
-    var examples = [],
+    var specify, adapter,
+        examples = [],
         currentExample,
         /**
          * Rolls up list of current and ancestors values for given prop name
@@ -182,7 +192,7 @@
          * @returns string of joined description names
          */
         names: function () {
-            return rollup(this, 'name').reverse().join(', ');
+            return rollup(this, 'name').reverse().join(specify.descriptionSeparator);
         }
     });
 
@@ -199,9 +209,12 @@
      * against any of the bundled assertion handlers and custom ones.
      * @constructor
      * @param {Object} value A test-produced value to assert against
+     * @param {Object} [desc] Optional, e.g. the name of the variable
+     *                        for automatic descriptions
      */
-    function AssertionHandler(value) {
+    function AssertionHandler(value, desc) {
         this.value = value;
+        this.description = desc;
     }
 
     /**
@@ -210,64 +223,93 @@
      * assertion function to assertionHandler prototype which can run implementation
      * @param {Object} asserts Object containing assertion implementations
      */
-    var addAssertions = function (asserts) {
+    function addAssertions(asserts) {
         util.each(asserts, function (name, fn) {
             AssertionHandler.prototype[name] = function () {
                 // implement this handler against backend
                 // by pre-pending AssertionHandler's current value to args
-                var args =  util.makeArray(arguments);
+                var args = util.makeArray(arguments),
+                    desc = ['asserting', util.phraseCase(name)],
+                    expected;
+
+                if (fn.shouldPrintValue !== false) {
+                    desc.splice(1, 0, util.prettyPrint(this.value, fn.shouldPrintDetails));
+                }
+
                 args.unshift(this.value);
+
+                if (this.description) {
+                    desc[1] += ',';
+                    desc.splice(1, 0, 'that (' + this.description + '), being');
+                }
 
                 // if no explicit message was given with the assertion,
                 // then let's build our own friendly one
                 if (fn.length === 2) {
-                    args[1] = args[1] || 'asserting ' + util.serialize(args[0]) + ' ' + util.phraseCase(name);
+                    args[1] = args[1] || desc.join(' ');
                 } else if (fn.length === 3) {
-                    var expected = util.serialize(args[1]);
-                    args[2] = args[2] || 'asserting ' + util.serialize(args[0]) + ' ' + util.phraseCase(name) + (expected ? ' ' + expected : expected);
+                    if (fn.shouldPrintExpected && !fn.shouldPrintExpected(args[1])) {
+                        expected = '';
+                    } else {
+                        expected = ' ' + util.prettyPrint(args[1]);
+                    }
+                    args[2] = args[2] || desc.join(' ') + expected;
                 }
 
                 fn.apply(this, args);
             };
         });
-    };
+    }
 
     /**
      * Add default assertions
      */
-    addAssertions({
+    var defaultAssertions = {
         equals: function (actual, expected, message) {
+            adapter.assert(actual === expected, message);
+        },
+        isSimilarTo: function (actual, expected, message) {
+            /*jshint eqeqeq:false*/
+            /*jslint eqeq: true */
             adapter.assert(actual == expected, message);
+            /*jslint eqeq: false */
+            /*jshint eqeqeq:true*/
+        },
+        isNotSimilarTo: function (actual, expected, message) {
+            /*jshint eqeqeq:false*/
+            /*jslint eqeq: true */
+            adapter.assert(actual != expected, message);
+            /*jslint eqeq: false */
+            /*jshint eqeqeq:true*/
         },
         isEqualTo: function (actual, expected, message) {
-            adapter.assert(actual == expected, message);
+            adapter.assert(actual === expected, message);
         },
         isNotEqualTo: function (actual, expected, message) {
-            adapter.assert(actual != expected, message);
+            adapter.assert(actual !== expected, message);
         },
+        // legacy:
         isStrictlyEqualTo: function (actual, expected, message) {
             adapter.assert(actual === expected, message);
         },
+        // legacy:
         isNotStrictlyEqualTo: function (actual, expected, message) {
             adapter.assert(actual !== expected, message);
         },
+        isOfType: function (actual, expected, message) {
+            adapter.assert(util.is(expected, actual), message);
+        },
         isTrue: function (actual, message) {
-            adapter.assert(actual, message);
+            adapter.assert(actual === true, message);
         },
         isFalse: function (actual, message) {
-            adapter.assert(!actual, message);
-        },
-        isNull: function (actual, message) {
-            adapter.assert(actual === null, message);
-        },
-        isNotNull: function (actual, message) {
-            adapter.assert(actual !== null, message);
+            adapter.assert(actual === false, message);
         },
         isDefined: function (actual, message) {
-            adapter.assert(typeof actual !== 'undefined', message);
+            adapter.assert(actual !== undefined, message);
         },
-        isUndefined: function (actual, message) {
-            adapter.assert(typeof actual === 'undefined', message);
+        isNotDefined: function (actual, message) {
+            adapter.assert(actual === undefined, message);
         },
         pass: function (actual, message) {
             adapter.assert(true, message);
@@ -275,26 +317,75 @@
         fail: function (actual, message) {
             adapter.assert(false, message);
         },
-        isFunction: function(actual, message) {
-            return adapter.assert(typeof actual === "function", message);
-        },
-        isNotFunction: function (actual, message) {
-            return adapter.assert(typeof actual !== "function", message);
-        },
-        throwsException: function (actual, expectedErrorDescription, message) {
-            // can optionally accept expected error message
+        throwsException: function (actual, expectedError, message) {
+            // can optionally accept expected error message string or object
             try {
                 actual();
                 adapter.assert(false, message);
             } catch (e) {
-                // so, this bit of weirdness is basically a way to allow for the fact
-                // that the test may have specified a particular type of error to catch, or not.
-                // and if not, e would always === e.
-                adapter.assert(e === (expectedErrorDescription || e), message);
+                if (expectedError === undefined) {
+                    // e always === e so assertion always passes
+                    adapter.assert(e === e, message);
+                } else if (typeof e === 'string') {
+                    adapter.assert(e === expectedError, message);
+                } else if (typeof e === 'object') {
+                    if (typeof expectedError === 'object') {
+                        adapter.assert(e.name === expectedError.name && e.message === expectedError.message, message);
+                    } else if(typeof expectedError === 'string')  {
+                        adapter.assert(e.message === expectedError, message);
+                    }
+                }
+            }
+        },
+        throwsError: function (actual, message) {
+            try {
+                actual();
+                adapter.assert(false, message);
+            } catch (e) {
+                adapter.assert(util.is('error', e), message);
+            }
+        },
+        throwsErrorWithMessage: function (actual, expectedMessage, message) {
+            try {
+                actual();
+                adapter.assert(false, message);
+            } catch (e) {
+                adapter.assert(util.is('error', e) && e.message === expectedMessage, message);
             }
         }
+    };
+
+    // Create a bunch of convenience assertions,
+    // isString, isNotString, ..., isNull, isNotNull:
+    util.each([
+        'String',
+        'Array',
+        'Object',
+        'Function',
+        'RegExp',
+        'Date',
+        'Number',
+        'Boolean',
+        'Undefined',
+        'Null'
+    ], function (i, key) {
+        defaultAssertions['is' + key] = function (actual, message) {
+            adapter.assert(util.is(key.toLowerCase(), actual), message);
+        };
+        defaultAssertions['isNot' + key] = function (actual, message) {
+            adapter.assert(!util.is(key.toLowerCase(), actual), message);
+        };
     });
 
+    defaultAssertions.pass.shouldPrintValue = false;
+    defaultAssertions.fail.shouldPrintValue = false;
+
+    defaultAssertions.throwsException.shouldPrintExpected = function (expected) {
+        return expected !== undefined;
+    };
+    defaultAssertions.throwsException.shouldPrintDetails = true;
+
+    addAssertions(defaultAssertions);
 
     // =====================
     // = pavlov Public API =
@@ -308,11 +399,13 @@
         /**
          * Initiates a new Example context
          * @param {String} description Name of what's being "described"
-         * @param {Function} fn Function containing description (before, after, specs, nested examples)
+         * @param {Function} fn Function containing description
+         *                      (before, after, specs, nested examples)
          */
         describe: function (description, fn) {
             if (arguments.length < 2) {
-                throw "both 'description' and 'fn' arguments are required";
+                throw new Error("both 'description' and 'fn' arguments " +
+                                "are required");
             }
 
             // capture reference to current example before construction
@@ -334,7 +427,7 @@
          */
         before: function (fn) {
             if (arguments.length === 0) {
-                throw "'fn' argument is required";
+                throw new Error("'fn' argument is required");
             }
             currentExample.before = fn;
         },
@@ -345,36 +438,42 @@
          */
         after: function (fn) {
             if (arguments.length === 0) {
-                throw "'fn' argument is required";
+                throw new Error("'fn' argument is required");
             }
             currentExample.after = fn;
         },
 
         /**
          * Creates a spec (test) to occur within an example
-         * When not passed fn, creates a spec-stubbing fn which asserts fail "Not Implemented"
+         * When not passed fn, creates a spec-stubbing fn which
+         * asserts fail "Not Implemented"
          * @param {String} specification Description of what "it" "should do"
-         * @param {Function} fn Function containing a test to assert that it does indeed do it (optional)
+         * @param {Function} fn Function containing a test to assert that it
+         *                      does indeed do it (optional)
          */
         it: function (specification, fn) {
+            var spec = specification;
             if (arguments.length === 0) {
-                throw "'specification' argument is required";
+                throw new Error("'specification' argument is required");
             }
             if (fn) {
                 if (fn.async) {
-                    specification += " asynchronously";
+                    spec += " asynchronously";
                 }
-                currentExample.specs.push([specification, fn]);
+                currentExample.specs.push([spec, fn]);
             } else {
-                // if not passed an implementation, create an implementation that simply asserts fail
-                api.it(specification, function () {api.assert.fail('Not Implemented');});
+                // if not passed an implementation, create an implementation
+                // that simply asserts fail
+                api.it(spec, function () { api.assert.fail('Not Implemented'); });
             }
         },
 
         /**
-         * wraps a spec (test) implementation with an initial call to pause() the test runner
+         * wraps a spec (test) implementation with an initial call to pause()
+         * the test runner
          * The spec must call resume() when ready
-         * @param {Function} fn Function containing a test to assert that it does indeed do it (optional)
+         * @param {Function} fn Function containing a test to assert that it
+         *                      does indeed do it (optional)
          */
         async: function (fn) {
             var implementation = function () {
@@ -392,12 +491,12 @@
          * function to be called for each of given's arguments
          * @param {Array} arguments either list of values or list of arrays of values
          */
-        given: function () {
-            if (arguments.length === 0) {
-                throw "at least one argument is required";
+        given: function given() {
+            var args = arguments;
+            if (args.length === 0) {
+                throw new Error("at least one argument is required");
             }
-            var args = util.makeArray(arguments);
-            if (arguments.length === 1 && util.isArray(arguments[0])) {
+            if (args.length === 1 && util.is('array', args[0])) {
                 args = args[0];
             }
 
@@ -406,11 +505,10 @@
                  * Defines a row spec (test) which is applied against each
                  * of the given's arguments.
                  */
-                it: function (specification, fn) {
-                    util.each(args, function () {
-                        var arg = this;
+                it: function given_it(specification, fn) {
+                    util.each(args, function (i, arg) {
                         api.it("given " + arg + ", " + specification, function () {
-                            fn.apply(this, util.isArray(arg) ? arg : [arg]);
+                            fn.apply(this, util.is('array', arg) ? arg : [arg]);
                         });
                     });
                 }
@@ -420,10 +518,11 @@
         /**
          * Assert a value against any of the bundled or custom assertions
          * @param {Object} value A value to be asserted
+         * @param {String} [name] The name of the variable, for clearer messages
          * @returns an AssertionHandler instance to fluently perform an assertion with
          */
-        assert: function (value) {
-            return new AssertionHandler(value);
+        assert: function (value, name) {
+            return new AssertionHandler(value, name);
         },
 
         /**
@@ -434,7 +533,7 @@
          */
         wait: function (ms, fn) {
             if (arguments.length < 2) {
-                throw "both 'ms' and 'fn' arguments are required";
+                throw new Error("both 'ms' and 'fn' arguments are required");
             }
             adapter.pause();
             global.setTimeout(function () {
@@ -477,50 +576,50 @@
      * @returns Modified version of original function with extra scope.  Can still
      * accept parameters of original function
      */
-    var extendScope = function (fn, thisArg, extraScope) {
+    function extendScope(fn, thisArg, extraScope) {
+        var fnAsString = fn.toString(),
+            params = fnAsString.match(/\(([^\)]*)\)/)[1], // get a string of the fn's parameters
+            source = fnAsString.match(/^[^\{]*\{((.*\s*)*)\}/m)[1]; // get a string of fn's body
 
-        // get a string of the fn's parameters
-        var params = fn.toString().match(/\(([^\)]*)\)/)[1],
-        // get a string of fn's body
-            source = fn.toString().match(/^[^\{]*\{((.*\s*)*)\}/m)[1];
-
+        /*jshint evil:true*/
+        /*jslint evil:true*/
         // create a new function with same parameters and
         // body wrapped in a with(extraScope) { }
-        fn = new Function (
+        fn = new Function(
             "extraScope" + (params ?  ", " + params : ""),
-            "with(extraScope) {" + source + "}");
+            "with(extraScope) {" + source + "}"
+        );
+        /*jslint evil:false*/
+        /*jshint evil:false*/
 
         // returns a fn wrapper which takes passed args,
         // pre-pends extraScope arg, and applies to modified fn
         return function () {
             var args = [extraScope];
-            util.each(arguments,function () {
+            util.each(arguments, function () {
                 args.push(this);
             });
             fn.apply(thisArg, args);
         };
-    };
+    }
 
     /**
      * Top-level Specify method.  Declares a new pavlov context
      * @param {String} name Name of what's being specified
      * @param {Function} fn Function containing exmaples and specs
      */
-    var specify = function (name, fn) {
+    specify = function specify(name, fn) {
         if (arguments.length < 2) {
-            throw "both 'name' and 'fn' arguments are required";
+            throw new Error("both 'name' and 'fn' arguments are required");
         }
         examples = [];
         currentExample = null;
 
         // set the test suite title
-        name += " Specifications";
-        if (typeof document !== 'undefined') {
-            document.title = name + ' - Pavlov - ' + adapter.name;
-        }
+        var specName = name + " Specifications";
 
         // run the adapter initiation
-        adapter.initiate(name);
+        adapter.initiate(specName);
 
         if (specify.globalApi) {
             // if set to extend global api,
@@ -534,7 +633,7 @@
         }
 
         // compile examples against the adapter and then run them
-        adapter.compile(name, examples)();
+        adapter.compile(specName, examples)();
     };
 
     // ====================================
@@ -542,7 +641,7 @@
     // ====================================
 
     // abstracts functionality of underlying testing framework
-    var adapter = {
+    adapter = {
         /**
          * adapter-specific initialization code
          * which is called once before any tests are run
@@ -555,7 +654,7 @@
          * @param {String} message message to pass along with assertion
          */
         assert: function (expr, message) {
-            throw "'assert' must be implemented by a test framework adapter";
+            throw new Error("'assert' must be implemented by a test framework adapter");
         },
         /**
          * adapter-specific compilation method.  Translates a nested set of
@@ -565,21 +664,21 @@
          * @param {Array} examples Array of example object instances, possibly nesteds
          */
         compile: function (suiteName, examples) {
-            throw "'compile' must be implemented by a test framework adapter";
+            throw new Error("'compile' must be implemented by a test framework adapter");
         },
         /**
          * adapter-specific pause method.  When an adapter implements,
          * allows for its test runner to pause its execution
          */
         pause: function () {
-            throw "'pause' not implemented by current test framework adapter";
+            throw new Error("'pause' not implemented by current test framework adapter");
         },
         /**
          * adapter-specific resume method.  When an adapter implements,
          * allows for its test runner to resume after a pause
          */
         resume: function () {
-            throw "'resume' not implemented by current test framework adapter";
+            throw new Error("'resume' not implemented by current test framework adapter");
         }
     };
 
@@ -594,11 +693,8 @@
         specify: specify,
         adapter: adapter,
         adapt: function (frameworkName, testFrameworkAdapter) {
-            if ( typeof frameworkName === "undefined" ||
-                typeof testFrameworkAdapter === "undefined" ||
-                frameworkName === null ||
-                testFrameworkAdapter === null) {
-                throw "both 'frameworkName' and 'testFrameworkAdapter' arguments are required";
+            if (!frameworkName || !testFrameworkAdapter) {
+                throw new Error("both 'frameworkName' and 'testFrameworkAdapter' arguments are required");
             }
             adapter.name = frameworkName;
             util.extend(adapter, testFrameworkAdapter);
@@ -609,7 +705,8 @@
         },
         api: api,
         globalApi: false,                 // when true, adds api to global scope
-        extendAssertions: addAssertions   // function for adding custom assertions
+        extendAssertions: addAssertions,  // function for adding custom assertions
+        descriptionSeparator: ', '       // separator used when rolling up names
     };
 }(window));
 
@@ -619,21 +716,19 @@
 // =========================
 
 (function () {
-    if (typeof QUnit === 'undefined') { return; }
+    'use strict';
+    /*global document: false, QUnit: false, pavlov: false, ok: false, stop: false, start: false, module: false, test: false, deepEqual: false, notDeepEqual: false */
+
+    if (QUnit === undefined) { return; }
 
     pavlov.adapt("QUnit", {
         initiate: function (name) {
-            var addEvent = function (elem, type, fn) {
-                if (elem.addEventListener) {
-                    elem.addEventListener(type, fn, false);
-                } else if (elem.attachEvent) {
-                    elem.attachEvent("on" + type, fn);
+            // after suite loads, set title and header on the report page
+            QUnit.addEvent(window, 'load', function () {
+                if (document !== undefined) {
+                    document.title = name + ' - Pavlov - QUnit';
                 }
-            };
 
-            // after suite loads, set the header on the report page
-            addEvent(window,'load',function () {
-                // document.getElementsByTag('h1').innerHTML = name;
                 var h1s = document.getElementsByTagName('h1');
                 if (h1s.length > 0) {
                     h1s[0].innerHTML = name;
@@ -696,7 +791,7 @@
                 each(example.specs, function () {
                     var spec = this;
                     statements.push(function () {
-                        test(spec[0],spec[1]);
+                        test(spec[0], spec[1]);
                     });
                 });
 

@@ -18,6 +18,8 @@
     "notEqual",
     "notStrictEqual",
     "test",
+    "testing",
+    "async",
     "asyncTest",
     "testBoth",
     "testWithDefault",
@@ -35,6 +37,7 @@
     "click",
     "fillIn",
     "wait",
+    "assert",
     "pavlov"
   ],
 
