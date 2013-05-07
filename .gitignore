@@ -2,3 +2,4 @@
 .DS_Store
 js/tests/generated/
 tmp
+log/
