@@ -1,5 +1,6 @@
 {
   "framework": "qunit",
+  "test_page":"tests/index.html",
   "src_files": [
     "app/js/libs/jquery-1.8.3.min.js",
     "app/js/libs/handlebars.js",
