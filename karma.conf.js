@@ -5,23 +5,22 @@
 // base path, that will be used to resolve files and exclude
 basePath = '';
 
-
 // list of files / patterns to load in the browser
 files = [
   QUNIT,
   QUNIT_ADAPTER,
   // libraries...
-  "app/js/libs/jquery-1.9.1.js",
-  "app/js/libs/handlebars-1.0.0-rc.4.js",
-  "app/js/libs/ember-1.0.0-rc.6.1.js",
+  "app/js/libs/jquery-1.10.2.js",
+  "app/js/libs/handlebars-1.1.2.js",
+  "app/js/libs/ember-1.2.0.js",
   "app/js/libs/ember-data.js",
   // application...
   "app/js/templates.js",
   "app/js/app.js",
   // testing...
   "tests/support/test_helper.js",
-  "tests/integration/**/*.js",
-  "tests/unit/**/*.js"
+  "tests/integration/**/*.js"//,
+  //"tests/unit/**/*.js"
 ];
 
 
@@ -63,7 +62,7 @@ autoWatch = true;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['Firefox', 'Chrome'];
+browsers = ['Chrome'];
 
 
 // If browser does not capture in given timeout [ms], kill it

@@ -30,6 +30,7 @@ test('Table 4, already had foods added to the tab', function(){
     find('#customer-tab > li').each(function (){
       actual.push( find(this).text() );
     });
+
     equal(find('div.nine h2').text(), 'Table 4', 'Table 4 heading displayed');
     equal(actual.join('').replace(/\s/g, ''), expectedFoods, 'Pizza, Pancakes, Fries, Hot Dogs, Cake already added');
     equal(find('#total span').text(), '$54.50', 'Already has $54.50 in foods in the tab');

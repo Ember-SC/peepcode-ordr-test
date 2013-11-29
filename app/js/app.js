@@ -18,13 +18,16 @@ App.IndexRoute = Ember.Route.extend({
 
 App.ApplicationRoute = Ember.Route.extend({
   setupController: function() {
-    this.controllerFor('food').set('model', App.Food.find());
+    foodController = this.controllerFor('food');
+    this.store.find('food').then(function(foods) {
+      foodController.set('content', foods);
+    });
   }
 });
 
 App.TablesRoute = Ember.Route.extend({
   model: function() {
-    return App.Table.find();
+    return this.store.find('table');
   }
 });
 
@@ -38,13 +41,15 @@ App.TableController = Ember.ObjectController.extend();
 
 App.FoodController = Ember.ArrayController.extend({
   needs: 'table',
-  addFood: function(food) {
-    var tabItems = this.get('controllers.table.tab.tabItems');
+  actions: {
+    addFood: function(food) {
+      var tabItems = this.get('controllers.table.tab.tabItems');
 
-    tabItems.createRecord({
-      food: food,
-      cents: food.get('cents')
-    });
+      tabItems.createRecord({
+        food: food,
+        cents: food.get('cents')
+      });
+    }
   }
 });
 
@@ -57,18 +62,18 @@ Ember.Handlebars.registerBoundHelper('money', function(value) {
 });
 
 
+// Adapter
+
+App.ApplicationAdapter = DS.FixtureAdapter;
+
 // Models
-App.Store = DS.Store.extend({
-  revision: 12,
-  adapter: 'DS.FixtureAdapter'
-});
 
 App.Table = DS.Model.extend({
-  tab: DS.belongsTo('App.Tab')
+  tab: DS.belongsTo('tab')
 });
 
 App.Tab = DS.Model.extend({
-  tabItems: DS.hasMany('App.TabItem'),
+  tabItems: DS.hasMany('tabItem'),
   cents: function() {
     return this.get('tabItems').getEach('cents').reduce(function(accum, item) {
       return accum + item;
@@ -78,7 +83,7 @@ App.Tab = DS.Model.extend({
 
 App.TabItem = DS.Model.extend({
   cents: DS.attr('number'),
-  food: DS.belongsTo('App.Food')
+  food: DS.belongsTo('food')
 });
 
 App.Food = DS.Model.extend({
